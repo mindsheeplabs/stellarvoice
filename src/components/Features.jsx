@@ -17,7 +17,7 @@ const features = [
         Icon: Target
     },
     { title: 'Real Objection Handling', description: "Our agents don't just read scripts. They pivot, handle pushback, and keep the conversation moving toward a booking.", Icon: MessageSquare },
-    { title: 'Full Transparency', description: 'Every call recorded, transcribed, and scored. You hear exactly what your AI is saying to your leads.', Icon: Eye },
+    { title: 'Full Transparency', description: 'Every call recorded, transcribed, and scored. We use it to keep improving your agent over time.', Icon: Eye },
     { title: 'Human-Sounding Voice', description: 'Natural voices that adapt tone and intent. Most callers cannot tell they are talking to an AI.', Icon: Mic },
     { title: 'Live in 5-7 Days', description: 'Most agencies take weeks. We go from kickoff to live calls in under a week.', Icon: Rocket }
 ];

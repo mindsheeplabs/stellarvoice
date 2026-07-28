@@ -25,7 +25,7 @@ const HowItWorks = () => {
                 {/* Brief Sec 3.12: pricing tagline below the three steps. */}
                 <p className="how-results-tagline">
                     <strong>You only pay for results.</strong> Every qualified booking lands on your calendar.
-                    Every call is recorded, transcribed, and scored. You see exactly what is working.
+                    Every call is recorded, transcribed, and scored, and used to keep improving your agent.
                 </p>
             </div>
         </section>

@@ -18,7 +18,7 @@ const cards = [
     {
         Icon: Cpu,
         title: 'Premium tech stack. Full flexibility.',
-        body: 'We use the most advanced voice AI technology available today. Natural voices with warm pacing, real hesitation, and the ability to handle interruptions. Most people on the other end of the call cannot tell they are talking to AI. We pair that with deep CRM integration, real-time analytics, and full call recording and transcription. Every call is logged, scored, and available for you to review.'
+        body: 'We use the most advanced voice AI technology available today. Natural voices with warm pacing, real hesitation, and the ability to handle interruptions. Most people on the other end of the call cannot tell they are talking to AI. We pair that with deep CRM integration, real-time analytics, and full call recording and transcription. Every call is logged, scored, and used to keep improving your agent over time.'
     }
 ];
 

@@ -19,7 +19,7 @@ const CASE = 'ai-receptionist-safety-net';
 const HERO_METRICS = [
     { value: '24/7', label: 'coverage, so the call that matters is never missed' },
     { value: 'Zero', label: 'delay before Emma answers, every time' },
-    { value: '~32', label: 'back-and-forth turns in a natural consultation' },
+    { value: '100%', label: 'of overflow and after-hours calls answered' },
 ];
 
 const CAPABILITIES = [
@@ -268,7 +268,7 @@ export default function CaseStudyReceptionist() {
                 {/* THE ENGAGEMENT */}
                 <section className="ipa-section" id="engagement">
                     <div className="container">
-                        <h2 className="ipa-h2-center">The engagement: reliability you can hear</h2>
+                        <h2 className="ipa-h2-center">The engagement: reliability you can count on</h2>
                         <div className="ipa-metrics">
                             {HERO_METRICS.map((m) => (
                                 <div key={m.label} className="ipa-metric">
@@ -278,7 +278,7 @@ export default function CaseStudyReceptionist() {
                             ))}
                         </div>
                         <p className="ipa-context">
-                            The point was never call volume, it was whether Emma could hold a real conversation and get something done on it. She can. Across six weeks of hands-on testing and refinement, Emma answered with zero delay every time and sustained natural, consultation-length conversations, around thirty back-and-forth turns and up to three minutes and forty-one seconds. She booked to the calendar, captured callbacks, and screened out spam, again and again. The result the agency valued most was not a number. It was the confidence that the phone is finally covered.
+                            The point was never call volume, it was whether Emma could hold a real conversation and get something done on it. She can. Across six weeks of hands-on testing and refinement, Emma answered with zero delay every time and sustained natural, consultation-length conversations that ran for minutes, not a ten-second bounce. She booked to the calendar, captured callbacks, and screened out spam, again and again. The result the agency valued most was not a number. It was the confidence that the phone is finally covered.
                         </p>
                     </div>
                 </section>
