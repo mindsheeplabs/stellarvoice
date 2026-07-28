@@ -2,13 +2,17 @@
 // Serves the built ./dist (SPA fallback) and auto-mounts every handler in ./api at /api/<name>.
 // Vercel handlers (`export default (req,res)=>...` using res.status().json()) run unchanged on Express.
 import express from 'express'
+import compression from 'compression'
 import { readdirSync, statSync, existsSync } from 'node:fs'
 import { fileURLToPath, pathToFileURL } from 'node:url'
-import { dirname, join, relative } from 'node:path'
+import { dirname, join, relative, sep } from 'node:path'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const app = express()
 app.set('trust proxy', true)          // behind Traefik — honour x-forwarded-for
+// gzip text assets. Vercel did this for free; Express does not. Without it the
+// JS bundle ships ~455KB raw instead of ~135KB, which is most of a slow mobile load.
+app.use(compression())
 app.use(express.json({ limit: '1mb' }))
 
 // ---- auto-mount api/ handlers (flat file api/x.js -> /api/x ; dir api/x/y.js -> /api/x/y) ----
@@ -36,9 +40,26 @@ for (const { route, file } of findHandlers(join(__dirname, 'api'))) {
 
 // ---- static frontend + SPA fallback ----
 const distDir = join(__dirname, 'dist')
-app.use(express.static(distDir, { index: false }))
+// Cache policy (express.static defaults to max-age=0, i.e. re-download everything
+// on every visit). Vite fingerprints /assets/* by content hash, so those are safe to
+// cache forever; everything else gets a short cache and index.html must never stick.
+app.use(express.static(distDir, {
+  index: false,
+  setHeaders(res, path) {
+    if (path.includes(`${sep}assets${sep}`)) {
+      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable')
+    } else if (path.endsWith('index.html')) {
+      res.setHeader('Cache-Control', 'no-cache')
+    } else {
+      res.setHeader('Cache-Control', 'public, max-age=86400')  // images, pdfs, audio
+    }
+  },
+}))
 app.use((req, res) => {
-  if (!req.path.startsWith('/api/')) return res.sendFile(join(distDir, 'index.html'))
+  if (!req.path.startsWith('/api/')) {
+    res.setHeader('Cache-Control', 'no-cache')   // SPA shell: always revalidate
+    return res.sendFile(join(distDir, 'index.html'))
+  }
   res.status(404).json({ ok: false, error: 'Not found' })
 })
 
