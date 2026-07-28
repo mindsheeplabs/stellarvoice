@@ -115,10 +115,11 @@ export default function CaseStudyReceptionist() {
             { property: 'og:description', content: description },
             { property: 'og:type', content: 'article' },
             { property: 'og:url', content: PAGE_URL },
-            { property: 'og:image', content: 'https://www.stellarvoiceagents.com/logo.webp' },
+            { property: 'og:image', content: 'https://www.stellarvoiceagents.com/case-studies/receptionist/hero-safety-net.webp' },
             { name: 'twitter:card', content: 'summary_large_image' },
             { name: 'twitter:title', content: 'Never Miss the One Call That Matters' },
             { name: 'twitter:description', content: description },
+            { name: 'twitter:image', content: 'https://www.stellarvoiceagents.com/case-studies/receptionist/hero-safety-net.webp' },
         ];
         const created = tags.map((tg) => {
             const m = document.createElement('meta');
@@ -219,6 +220,12 @@ export default function CaseStudyReceptionist() {
                         <p>At the same time, a published business line attracts a heavy stream of spam, robocalls, and vendor pitches. Every one of those is a small tax on a team that should be doing the work clients pay for.</p>
                         <p className="ipa-pull">The calls that matter, a real prospect, or someone asking for the founder, are rare. That is exactly why each one is so valuable, and why losing even one hurts.</p>
                     </div>
+                    <div className="container">
+                        <picture className="ipa-figure">
+                            <source media="(max-width: 640px)" srcSet="/case-studies/receptionist/before-after-mobile.webp" />
+                            <img src="/case-studies/receptionist/before-after.webp" alt="Without Emma, a call falls through a net with a hole into voicemail; with Emma, the call is caught by the AI voice agent." loading="lazy" />
+                        </picture>
+                    </div>
                 </section>
 
                 {/* THE SAFETY NET */}
@@ -228,6 +235,12 @@ export default function CaseStudyReceptionist() {
                         <p>This is the heart of the story. Emma is not there to handle the primary flow of calls. She sits on the overflow and after-hours path, the spillover a busy boutique team cannot reach. Her value is measured in calls <em>captured</em>, not calls <em>handled</em>.</p>
                         <p>That is why the numbers are, correctly, small. A specialist agency simply does not get high call counts, and Emma only ever fields the calls that would otherwise have been lost. Low volume is the design, not a shortfall.</p>
                         <p className="ipa-pull">For an agency, one captured after-hours prospect, or one relayed message that reaches the founder, can be worth more than hundreds of routine calls.</p>
+                    </div>
+                    <div className="container">
+                        <picture className="ipa-figure">
+                            <source media="(max-width: 640px)" srcSet="/case-studies/receptionist/flow-routing-mobile.webp" />
+                            <img src="/case-studies/receptionist/flow-routing.webp" alt="Calls to the main line pass straight through; overflow and after-hours calls branch to Emma, the AI receptionist, who books them, sends a message, or screens spam." loading="lazy" />
+                        </picture>
                     </div>
                 </section>
 

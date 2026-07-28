@@ -234,6 +234,9 @@
 .ipa-why p { margin: 0; color: #555; font-size: 0.95rem; line-height: 1.6; }
 /* Plain capability cards (no number badge) — used on the receptionist case study */
 .ipa-why-plain { border-top: 3px solid var(--electric-violet, #7868F8); }
+/* Inline case-study figure (desktop + mobile via <picture>) */
+.ipa-figure { display: block; max-width: 920px; margin: 2.25rem auto 0; }
+.ipa-figure img { width: 100%; height: auto; display: block; border-radius: 16px; border: 1px solid #E6E2F0; }
 
 /* Tech + next */
 .ipa-twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
