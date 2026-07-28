@@ -29,21 +29,21 @@ const cards = [
         status: 'live'
     },
     {
+        slug: 'ai-receptionist-safety-net',
+        industry: 'Marketing Agency / Inbound Reception',
+        title: 'The 24/7 safety net for a boutique agency\'s busiest phone risk.',
+        client: 'Boutique marketing agency (Washington DC / Maryland)',
+        headline: '24/7',
+        headlineLabel: 'zero-miss coverage on overflow and after-hours calls',
+        status: 'live'
+    },
+    {
         slug: null,
         industry: 'Solar Energy',
         title: 'Case study coming soon',
         client: 'Solar engagement in production',
         headline: 'In progress',
         headlineLabel: 'Publishing when data is verified',
-        status: 'coming-soon'
-    },
-    {
-        slug: null,
-        industry: 'Professional Services',
-        title: 'Case study coming soon',
-        client: 'Currently in pilot',
-        headline: 'In pilot',
-        headlineLabel: 'Publishing when data is confirmed',
         status: 'coming-soon'
     }
 ];

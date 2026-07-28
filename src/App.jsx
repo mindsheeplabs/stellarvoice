@@ -8,6 +8,7 @@ import PricingPage from './pages/PricingPage'
 import CaseStudiesHub from './pages/CaseStudiesHub'
 import CaseStudyEasyStart from './pages/CaseStudyEasyStart'
 import CaseStudyIPA from './pages/CaseStudyIPA'
+import CaseStudyReceptionist from './pages/CaseStudyReceptionist'
 import BlogIndex from './pages/BlogIndex'
 import BlogPost from './pages/BlogPost'
 import GuidesPage from './pages/GuidesPage'
@@ -42,6 +43,7 @@ function App() {
           <Route path="/case-studies" element={<CaseStudiesHub />} />
           <Route path="/case-studies/denes-aldott" element={<CaseStudyEasyStart />} />
           <Route path="/case-studies/ipa-lead-reactivation" element={<CaseStudyIPA />} />
+          <Route path="/case-studies/ai-receptionist-safety-net" element={<CaseStudyReceptionist />} />
           <Route path="/blog" element={<BlogIndex />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/guides" element={<GuidesPage />} />

@@ -232,6 +232,8 @@
 }
 .ipa-why h3 { color: var(--deep-purple, #25005D); font-size: 1.1rem; font-weight: 800; margin: 0 0 0.5rem; text-transform: none; }
 .ipa-why p { margin: 0; color: #555; font-size: 0.95rem; line-height: 1.6; }
+/* Plain capability cards (no number badge) — used on the receptionist case study */
+.ipa-why-plain { border-top: 3px solid var(--electric-violet, #7868F8); }
 
 /* Tech + next */
 .ipa-twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
