@@ -10,6 +10,7 @@
 // native Node ESM (Vite-style extensionless imports throw ERR_MODULE_NOT_FOUND).
 import { Resend } from 'resend';
 import { GUIDES } from '../../src/data/guides.js';
+import { leadSetCookies } from '../_lib/leadCookie.js';
 
 const SITE_URL = process.env.SITE_URL || 'https://www.stellarvoiceagents.com';
 const CALENDLY_URL = 'https://calendly.com/garysarco1/30min';
@@ -198,5 +199,14 @@ export default async function handler(req, res) {
     if (!guideEmailSent) {
         return res.status(502).json({ ok: false, error: 'We could not send the email. Please try again.' });
     }
+
+    // Identify this browser as a known lead (server-set = survives Safari ITP).
+    // server.js watches for the cookie and alerts us when they come back.
+    const cookies = leadSetCookies(
+        { e: email, n: name, s: `guide:${guideSlug}`, t: new Date().toISOString().slice(0, 10) },
+        req.headers.host
+    );
+    if (cookies.length) res.setHeader('Set-Cookie', cookies);
+
     return res.status(200).json({ ok: true, guideEmailSent: true });
 }

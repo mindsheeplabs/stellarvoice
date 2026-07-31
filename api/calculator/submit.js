@@ -11,6 +11,7 @@
 import { Resend } from 'resend';
 import { QUESTIONS } from '../../src/calculator/questions.js';
 import { calculate } from '../../src/calculator/calc.js';
+import { leadSetCookies } from '../_lib/leadCookie.js';
 
 const DEFAULT_ALLOWED_ORIGINS = [
     'https://stellarvoiceagents.com',
@@ -277,6 +278,14 @@ export default async function handler(req, res) {
 
     const internalEmailSent = outcome(internalRes, 'internal');
     const clientEmailSent = contactKind === 'email' ? outcome(clientRes, 'client') : false;
+
+    // Identify this browser as a known lead (server-set = survives Safari ITP).
+    // server.js watches for the cookie and alerts us when they come back.
+    const cookies = leadSetCookies(
+        { e: answers.contact, n: answers.businessName, s: 'quiz', t: new Date().toISOString().slice(0, 10) },
+        req.headers.host
+    );
+    if (cookies.length) res.setHeader('Set-Cookie', cookies);
 
     return res.status(200).json({
         ok: true,
