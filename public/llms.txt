@@ -1,41 +1,54 @@
 # Stellar Voice Agents
 
-> AI voice agents that engage, qualify, and book appointments 24/7. Built for businesses where slow follow-up loses revenue — Real Estate, Health, Finance, Trades, and any team running ads or fielding inbound calls.
+> Best-in-class AI voice agents that call, qualify and book leads 24/7, with the same AI following up by text, WhatsApp and website chat. Voice first, every channel covered. Built for businesses where slow follow-up loses revenue: Real Estate, Solar, Healthcare, Finance, Trades and any team running ads or fielding inbound calls.
 
-Stellar Voice Agents replaces slow, inconsistent, human-bottlenecked lead handling with AI voice agents that sound human, respond instantly, and qualify and book around the clock. The brand voice is direct, outcome-driven, no hype, no hedging.
+Stellar Voice Agents replaces slow, inconsistent, human-bottlenecked lead handling with AI agents that sound human, respond in seconds, and qualify and book around the clock. One agent, one prompt, one strategy, run across every channel: the agent that calls a lead is the same agent that texts them. Text vs WhatsApp is chosen automatically by the lead's country. The brand voice is direct, outcome-driven, no hype, no hedging.
 
 ## Products
 
-- **AI Receptionist** ($597/mo starting): Answers every incoming call in under 1 second. Qualifies callers, books appointments, sends call summaries. Two agents per base package — one for calls, one for SMS.
-- **ClosedLoop** ($10/lead starting): Instant lead response. The moment someone responds to an ad or fills out a form, we call them — beats every competitor to the phone, qualifies, and books before they shop around.
-- **Dead Lead Revival** ($10/lead starting): We work your aged-lead database, identify who's ready to move now, and put re-activated prospects back on your calendar.
+- **Outbound Sales Qualifier**: The moment someone responds to an ad or fills a form, the AI calls them in seconds, qualifies on the call and books the meeting. If the call is not answered, the same AI follows up by text or WhatsApp until the lead is booked.
+- **Dead Lead Reactivation**: The AI works aged-lead databases by call, text and WhatsApp, identifies who is ready to move now, and puts re-activated prospects back on the calendar. Case study: a 6% reactivation rate on 11-month-old leads produced a confirmed $500K property buyer.
+- **Inbound Sales Qualifier**: Answers every inbound call instantly 24/7, qualifies each caller, books qualified prospects directly into the calendar. Case study: a 24/7 AI receptionist acting as a zero-miss safety net for a boutique agency's overflow and after-hours calls.
+- **Appointment Engine**: The done-for-you funnel. Ads, AI calling and booking run as one managed system, priced around pilots.
 
-All plans include free white-glove agent setup with a 3-month commitment, 14-day pilot, and cancel anytime.
+Pricing is performance based: a low monthly retainer plus a fee per qualified booking. No public rate card; pricing is scoped per business on a demo call.
+
+## Why teams choose Stellar
+
+- Reliability is the product. Built on best-in-class AI (Google Gemini, OpenAI's ChatGPT models, ElevenLabs voices), orchestrated by an in-house platform.
+- An in-house, state-of-the-art testing and simulation system puts every agent through hundreds of simulated conversations, edge cases and guardrail probes before it speaks to a real lead.
+- Every conversation is recorded, transcribed and scored, and used to keep improving the agent over time.
 
 ## Industries served
 
-Real Estate · Healthcare · Finance & Insurance · Solar · Trades & Home Services · Legal · Landscaping · Auto · Any lead-driven business where speed-to-lead matters.
+Real Estate · Solar · Healthcare · Finance · Trades & Home Services · Marketing Agencies · Hospitality · Any lead-driven business where speed-to-lead matters.
+
+## Case studies
+
+- International Property Alerts (international real estate): dead database to a $500K property buyer; started on voice, the same intelligence runs AI text for them today. https://www.stellarvoiceagents.com/case-studies/ipa-lead-reactivation
+- EasyStart Homes (new home builder): 17 to 25% booking rate on cold leads. https://www.stellarvoiceagents.com/case-studies/denes-aldott
+- Boutique marketing agency (anonymised): Emma, the 24/7 AI receptionist safety net. https://www.stellarvoiceagents.com/case-studies/ai-receptionist-safety-net
 
 ## Founders
 
-- **Gary Sarco** — CEO & Founder. Background in cybersecurity, IT operations, and 6 years in real estate. Built Stellar after watching leads slip through the cracks because nobody picked up fast enough.
-- **David Taylor** — Co-Founder & CTO. Co-founder of AI to the World. Runs the technical engine — voice agents that sound human, integrate with any CRM, and stay live at scale.
+- **Gary Sarco** — CEO & Founder. Background in cybersecurity, IT operations, and 6 years in real estate.
+- **David Taylor** — Co-Founder & CTO. A co-founder of AI to the World. Runs the technical engine.
 
 ## Key signals & metrics
 
-- 3× speed-to-lead vs human follow-up
-- +120% qualified-lead volume from AI screening
+- Under 5 seconds from form fill to first call
+- 17 to 25% booking rate on cold leads
+- 24/7 coverage across voice, text, WhatsApp and chat
+- 3x speed-to-lead vs human follow-up
 - +45% additional leads captured outside business hours
-- +25% conversion lift from natural-sounding voice vs robotic IVR
-- +67% appointment lift from analyzing call transcripts
 
 ## Engage
 
-- **Live demos**: stellarvoiceagents.com (audio samples for Solar, Insurance, Marketing, Bookkeeping, Real Estate)
-- **30-second revenue calculator**: stellarvoiceagents.com (calculates monthly revenue currently leaking from missed calls / slow follow-up / after-hours / time-on-phone)
+- **Free industry guides**: https://www.stellarvoiceagents.com/guides
+- **30-second revenue quiz**: on the homepage, estimates revenue leaking from missed calls, slow follow-up and after-hours gaps
 - **Book a demo with Gary**: https://calendly.com/garysarco1/30min
 
 ## Contact
 
 - Website: https://www.stellarvoiceagents.com
-- Email: hello@stellarvoiceagents.com (sales: garysarco1@gmail.com)
+- Email: hello@stellarvoiceagents.com

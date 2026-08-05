@@ -3,6 +3,8 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Capabilities from '../components/Capabilities';
 import HowItWorks from '../components/HowItWorks';
+import MultiChannel from '../components/MultiChannel';
+import Reliability from '../components/Reliability';
 import Features from '../components/Features';
 import Demos from '../components/Demos';
 import CTABanner from '../components/CTABanner';
@@ -22,8 +24,8 @@ export default function HowItWorksPage() {
                         <p className="hiw-hero-eyebrow">How It Works</p>
                         <h1>An AI that books revenue. Not just calls.</h1>
                         <p className="hiw-hero-sub">
-                            What our voice agents actually do, how we deploy them, and what makes them
-                            different from generalist AI platforms.
+                            What our agents actually do across voice, text, WhatsApp and chat, how we deploy
+                            them, and what makes them different from generalist AI platforms.
                         </p>
                     </div>
                 </section>
@@ -31,8 +33,14 @@ export default function HowItWorksPage() {
                 {/* CAPABILITIES */}
                 <Capabilities />
 
+                {/* ONE BRAIN, EVERY CHANNEL + CADENCE */}
+                <MultiChannel />
+
                 {/* PROCESS */}
                 <HowItWorks />
+
+                {/* RELIABILITY */}
+                <Reliability />
 
                 {/* FEATURES */}
                 <Features />

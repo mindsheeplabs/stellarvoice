@@ -7,10 +7,10 @@ const Hero = ({ onOpenCalculator }) => {
         <section id="hero" className="hero">
             <div className="hero-content container">
                 <h1 className="hero-title">
-                    Never lose<br />another lead.
+                    AI voice agents<br />your leads love talking to.
                 </h1>
                 <p className="hero-subtitle">
-                    AI voice agents that qualify your leads and book your appointments. You only pay when we deliver.
+                    Our voice agents call, qualify and book your leads in seconds. When a call is not answered, the same AI follows up by text or WhatsApp until the lead is booked. One intelligence, every channel. You only pay when we deliver.
                 </p>
                 <div className="hero-cta-group">
                     <button type="button" onClick={onOpenCalculator} className="btn-primary">Take the 30-Sec Test</button>

@@ -4,6 +4,8 @@ import Hero from '../components/Hero';
 import QuoteBar from '../components/QuoteBar';
 import SoundsReal from '../components/SoundsReal';
 import { FeaturedDemo, IndustriesStrip, TeamTeaser, FAQTeaser, AppointmentEngineTeaser } from '../components/HomepageTeasers';
+import MultiChannel from '../components/MultiChannel';
+import Reliability from '../components/Reliability';
 import CalculatorCTA from '../components/Calculator/CalculatorCTA';
 import Calculator from '../components/Calculator/Calculator';
 import LeadMagnet from '../components/Guide/LeadMagnet';
@@ -18,12 +20,13 @@ import Footer from '../components/Footer';
 //   - Case study cards -> /case-studies
 //   - 8-card Industries grid -> compressed to a 6-vertical strip here only
 //
-// Homepage flow now:
-//   Hero -> IPA case-study quote (+ read link) -> SoundsReal
-//   -> FeaturedDemo (1 real client call + link to all 6)
+// Homepage flow now (Aug 2026 multi-channel repositioning):
+//   Hero (voice-first, multi-channel) -> IPA case-study quote (+ read link)
+//   -> SoundsReal (voice stays the emotional centre) -> MultiChannel
+//   ("one brain, every channel" + cadence) -> FeaturedDemo
 //   -> Free guides (lead magnet) -> Revenue quiz CTA -> Products
-//   -> Appointment Engine teaser -> Industries strip
-//   -> Plan Finder CTA -> Team teaser -> FAQ teaser -> CTABanner
+//   -> Reliability (models + in-house testing) -> Appointment Engine teaser
+//   -> Industries strip -> Plan Finder CTA -> Team -> FAQ -> CTABanner
 export default function HomePage() {
     const [calcOpen, setCalcOpen] = useState(false);
 
@@ -34,10 +37,12 @@ export default function HomePage() {
                 <Hero onOpenCalculator={() => setCalcOpen(true)} />
                 <QuoteBar />
                 <SoundsReal />
+                <MultiChannel />
                 <FeaturedDemo />
                 <LeadMagnet />
                 <CalculatorCTA onOpen={() => setCalcOpen(true)} />
                 <Products />
+                <Reliability />
                 <AppointmentEngineTeaser />
                 <IndustriesStrip />
                 {/* Plan-finder CTA in the former pricing slot.

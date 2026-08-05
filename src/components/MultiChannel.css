@@ -1,0 +1,74 @@
+/* One brain. Every channel. — multi-channel section */
+.mc-section { padding: 5rem 0; background: var(--off-white, #F3F3F3); }
+
+/* Channel line-up: voice featured, text + WhatsApp supporting */
+.mc-channels { display: grid; grid-template-columns: 1.35fr 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
+.mc-channel {
+    background: #fff; border: 1px solid #E6E2F0; border-radius: 18px; padding: 1.75rem;
+    box-shadow: 0 8px 24px rgba(37, 0, 93, 0.05);
+}
+.mc-channel h3 { margin: 0.35rem 0 0.5rem; color: var(--deep-purple, #25005D); font-size: 1.25rem; font-weight: 800; }
+.mc-channel p { margin: 0; color: #555; font-size: 0.95rem; line-height: 1.6; }
+.mc-channel-icon {
+    display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px;
+    border-radius: 12px; background: var(--pale-lavender, #F5F2FF); color: var(--electric-violet, #7868F8);
+    margin-bottom: 0.75rem;
+}
+.mc-channel-tag {
+    display: inline-block; margin-left: 0.6rem; padding: 3px 10px; border-radius: 999px;
+    background: var(--pale-lavender, #F5F2FF); color: var(--violet-text, #5040C7);
+    font-size: 0.7rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+}
+.mc-featured {
+    background: linear-gradient(135deg, var(--deep-purple, #25005D), var(--royal-purple, #473D92));
+    border: none;
+}
+.mc-featured h3 { color: #fff; font-size: 1.45rem; }
+.mc-featured p { color: rgba(255, 255, 255, 0.88); }
+.mc-featured .mc-channel-icon { background: rgba(255, 255, 255, 0.14); color: #fff; }
+.mc-featured .mc-channel-tag { background: var(--electric-violet, #7868F8); color: #fff; }
+
+.mc-chat-note {
+    display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+    margin: 1.25rem auto 0; max-width: 720px; color: #777; font-size: 0.88rem; text-align: center;
+}
+.mc-chat-note svg { flex-shrink: 0; color: var(--electric-violet, #7868F8); }
+
+/* Cadence flow — native, responsive */
+.mc-flow { display: flex; align-items: stretch; justify-content: center; gap: 0.9rem; margin: 3rem auto 0; max-width: 1040px; }
+.mc-flow-step {
+    flex: 1; display: flex; flex-direction: column; justify-content: center; text-align: center;
+    background: #fff; border: 1px solid #E6E2F0; border-radius: 14px; padding: 1rem 1.1rem;
+}
+.mc-flow-hub {
+    background: linear-gradient(135deg, var(--royal-purple, #473D92), var(--electric-violet, #7868F8));
+    border: none; transform: scale(1.06);
+}
+.mc-flow-hub .mc-flow-label, .mc-flow-hub .mc-flow-sub { color: #fff; }
+.mc-flow-label { color: var(--deep-purple, #25005D); font-weight: 800; font-size: 0.98rem; line-height: 1.3; }
+.mc-flow-sub { margin-top: 0.3rem; color: #777; font-size: 0.8rem; line-height: 1.35; }
+.mc-flow-hub .mc-flow-sub { color: rgba(255, 255, 255, 0.85); }
+.mc-flow-arrow { align-self: center; flex-shrink: 0; width: 0; height: 0; border-top: 7px solid transparent; border-bottom: 7px solid transparent; border-left: 9px solid var(--electric-violet, #7868F8); }
+.mc-flow-caption { margin: 1.5rem auto 0; max-width: 760px; text-align: center; color: #666; font-size: 0.92rem; line-height: 1.6; }
+
+/* Proof cards */
+.mc-proof { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2.5rem auto 0; max-width: 900px; }
+.mc-proof-card {
+    display: block; background: #fff; border: 1px solid #E6E2F0; border-radius: 16px; padding: 1.4rem 1.5rem;
+    text-decoration: none; transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.mc-proof-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(37, 0, 93, 0.1); }
+.mc-proof-tag {
+    display: inline-block; padding: 3px 10px; border-radius: 999px; background: var(--pale-lavender, #F5F2FF);
+    color: var(--violet-text, #5040C7); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+}
+.mc-proof-card p { margin: 0.7rem 0; color: var(--near-black, #1A1A1A); font-size: 0.95rem; line-height: 1.55; font-weight: 600; }
+.mc-proof-cta { color: var(--violet-text, #5040C7); font-weight: 800; font-size: 0.88rem; }
+
+@media (max-width: 900px) {
+    .mc-channels { grid-template-columns: 1fr; }
+    .mc-flow { flex-direction: column; align-items: stretch; max-width: 480px; }
+    .mc-flow-hub { transform: none; }
+    .mc-flow-arrow { align-self: center; transform: rotate(90deg); margin: -2px 0; }
+    .mc-proof { grid-template-columns: 1fr; }
+}

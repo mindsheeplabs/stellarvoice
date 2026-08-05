@@ -15,7 +15,7 @@ const products = [
         Icon: Zap,
         features: [
             'The moment someone responds to your ad, we call them',
-            'Beats every competitor to the phone, engage while hot',
+            'No answer? The same AI follows up by text or WhatsApp',
             'Qualifies them on the call against your criteria',
             'Books them into your calendar before they shop around'
         ],
@@ -28,8 +28,8 @@ const products = [
         features: [
             'We call your aged-lead database on your behalf',
             'Identifies who\'s ready to move, now',
-            'Puts re-activated prospects back on your calendar',
-            'Full analytics on every conversation'
+            'Works the list by call, text and WhatsApp until they respond',
+            'Puts re-activated prospects back on your calendar'
         ],
         color: '#473D92'
     },
@@ -55,7 +55,7 @@ const Products = () => {
             <div className="container">
                 <div ref={titleRef} className="reveal">
                     <h2 className="section-title">Our Products</h2>
-                    <p className="section-subtitle">Three AI voice products. One goal: make sure you never lose a lead to slow response time again.</p>
+                    <p className="section-subtitle">Three AI products, voice first with text and WhatsApp follow-up built in. One goal: make sure you never lose a lead to slow response time again.</p>
                 </div>
                 <div className="products-grid" ref={gridRef}>
                     {products.map((product, index) => (

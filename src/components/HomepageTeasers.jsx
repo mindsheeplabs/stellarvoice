@@ -164,7 +164,15 @@ const faqTeaserItems = [
     },
     {
         question: 'What does it cost?',
-        answer: 'Pricing starts at $497/month plus a per-booking fee starting at $35. The more you commit, the lower the per-booking rate.'
+        answer: 'Our pricing is performance based: a low monthly retainer plus a fee per qualified booking, so the majority of what you pay only kicks in when we deliver. Book a demo and we will scope it for your lead volume.'
+    },
+    {
+        question: 'Which channels do you support?',
+        answer: 'Voice is the flagship. The same agent also runs over SMS, WhatsApp and website chat, so a lead who does not answer the phone still gets followed up until they are booked.'
+    },
+    {
+        question: 'How do you choose text vs WhatsApp?',
+        answer: 'Automatically, by the lead\'s country. Markets that live on WhatsApp get WhatsApp; everyone else gets SMS. Same agent, same conversation, either way.'
     },
     {
         question: 'How fast can you deploy an agent?',
