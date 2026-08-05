@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Team from '../components/Team';
@@ -11,6 +11,17 @@ import './AboutPage.css';
 // origin story, the team bios, and the WhyDifferent values that were
 // previously scattered or only on the homepage.
 export default function AboutPage() {
+    useEffect(() => {
+        const prevTitle = document.title;
+        document.title = 'About Us: The Team Behind the Agents | Stellar Voice Agents';
+        const desc = document.querySelector('meta[name="description"]');
+        const prevDesc = desc?.getAttribute('content');
+        if (desc) desc.setAttribute('content', 'Meet the founders behind Stellar Voice Agents: a sales veteran and a systems builder shipping AI voice agents that book real meetings every day.');
+        return () => {
+            document.title = prevTitle;
+            if (desc && prevDesc) desc.setAttribute('content', prevDesc);
+        };
+    }, []);
     return (
         <>
             <Navbar />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTABanner from '../components/CTABanner';
@@ -13,6 +13,18 @@ const ORDER = ['real-estate', 'home-services', 'healthcare', 'finance', 'hospita
 // slugs match a GUIDE_INDUSTRIES id, so we pass the slug as the industry.
 export default function GuidesPage() {
     const [openId, setOpenId] = useState(null);
+
+    useEffect(() => {
+        const prevTitle = document.title;
+        document.title = 'Free AI Voice Guides by Industry | Stellar Voice Agents';
+        const desc = document.querySelector('meta[name="description"]');
+        const prevDesc = desc?.getAttribute('content');
+        if (desc) desc.setAttribute('content', 'Free practical playbooks for Real Estate, Hotels, Home Services, Healthcare, Finance, Marketing Agencies and Hospitality: where the revenue leaks and how AI voice fixes it.');
+        return () => {
+            document.title = prevTitle;
+            if (desc && prevDesc) desc.setAttribute('content', prevDesc);
+        };
+    }, []);
 
     const openFor = (slug) => {
         track('guide_card_clicked', { guide: slug });

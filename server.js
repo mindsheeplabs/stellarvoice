@@ -8,6 +8,7 @@ import { readdirSync, statSync, existsSync } from 'node:fs'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { dirname, join, relative, sep } from 'node:path'
 import { verifyLead, parseCookies, returnSetCookies, LEAD_COOKIE, SEEN_COOKIE } from './api/_lib/leadCookie.js'
+import { recordVisit } from './api/_lib/visitTrail.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const app = express()
@@ -90,9 +91,11 @@ app.use((req, res, next) => {
     if (/\.[a-z0-9]+$/i.test(req.path)) return next()                       // real files, not pages
     if (!String(req.headers.accept ?? '').includes('text/html')) return next()
     const cookies = parseCookies(req.headers.cookie)
-    if (cookies[SEEN_COOKIE] || !cookies[LEAD_COOKIE]) return next()
+    if (!cookies[LEAD_COOKIE]) return next()
     const lead = verifyLead(cookies[LEAD_COOKIE])
     if (!lead) return next()
+    recordVisit(lead, req.path)                                             // seed the visit-trail digest
+    if (cookies[SEEN_COOKIE]) return next()
     res.setHeader('Set-Cookie', returnSetCookies(lead, req.headers.host))   // throttle + rolling renewal
     sendReturnAlert(lead, req).catch((e) => console.error('[return-alert]', e))
   } catch (e) { console.error('[return-alert]', e) }

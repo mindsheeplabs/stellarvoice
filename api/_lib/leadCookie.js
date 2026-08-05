@@ -19,6 +19,9 @@ import { createHmac, timingSafeEqual } from 'node:crypto';
 const VERSION = 'v1';
 export const LEAD_COOKIE = 'sva_lead';
 export const SEEN_COOKIE = 'sva_seen';
+// Non-HttpOnly marker (no PII, literal "1") so page JS knows this browser is a
+// known lead and can beacon SPA route changes for the visit-trail digest.
+export const KNOWN_COOKIE = 'sva_known';
 const LEAD_MAX_AGE = 365 * 24 * 60 * 60; // 1 year, refreshed on every return
 const SEEN_MAX_AGE = 4 * 60 * 60;        // one return-alert per 4h "session"
 
@@ -73,7 +76,8 @@ export function leadSetCookies(payload, host) {
     const d = cookieDomain(host);
     return [
         `${LEAD_COOKIE}=${token}; Max-Age=${LEAD_MAX_AGE}${FLAGS}${d}`,
-        `${SEEN_COOKIE}=1; Max-Age=${SEEN_MAX_AGE}${FLAGS}${d}`
+        `${SEEN_COOKIE}=1; Max-Age=${SEEN_MAX_AGE}${FLAGS}${d}`,
+        `${KNOWN_COOKIE}=1; Max-Age=${LEAD_MAX_AGE}; Path=/; Secure; SameSite=Lax${d}`
     ];
 }
 
@@ -82,7 +86,10 @@ export function leadSetCookies(payload, host) {
 export function returnSetCookies(payload, host) {
     const token = signLead(payload);
     const d = cookieDomain(host);
-    const out = [`${SEEN_COOKIE}=1; Max-Age=${SEEN_MAX_AGE}${FLAGS}${d}`];
+    const out = [
+        `${SEEN_COOKIE}=1; Max-Age=${SEEN_MAX_AGE}${FLAGS}${d}`,
+        `${KNOWN_COOKIE}=1; Max-Age=${LEAD_MAX_AGE}; Path=/; Secure; SameSite=Lax${d}`
+    ];
     if (token) out.unshift(`${LEAD_COOKIE}=${token}; Max-Age=${LEAD_MAX_AGE}${FLAGS}${d}`);
     return out;
 }

@@ -14,6 +14,24 @@ import BlogPost from './pages/BlogPost'
 import GuidesPage from './pages/GuidesPage'
 import AppointmentEnginePage from './pages/AppointmentEnginePage'
 
+// Known leads (sva_known marker, set server-side with the signed lead cookie)
+// beacon SPA route changes so the visit-trail digest email can show which
+// pages they browsed. Identity stays in the HttpOnly cookie; this only sends
+// the path. Consecutive duplicates are deduped server-side.
+function VisitBeacon() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    if (!document.cookie.split('; ').includes('sva_known=1')) return;
+    try {
+      navigator.sendBeacon(
+        '/api/visit/track',
+        new Blob([JSON.stringify({ p: pathname })], { type: 'application/json' })
+      );
+    } catch { /* fire-and-forget */ }
+  }, [pathname]);
+  return null;
+}
+
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
   useEffect(() => {
@@ -34,6 +52,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <VisitBeacon />
       <div className="app-container">
         <Routes>
           <Route path="/" element={<HomePage />} />
