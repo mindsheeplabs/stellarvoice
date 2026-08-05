@@ -10,7 +10,7 @@ const Hero = ({ onOpenCalculator }) => {
                     AI voice agents<br />your leads love talking to.
                 </h1>
                 <p className="hero-subtitle">
-                    Our voice agents call, qualify and book your leads in seconds. When a call is not answered, the same AI follows up by text or WhatsApp until the lead is booked. One intelligence, every channel. You only pay when we deliver.
+                    Our voice agents call, qualify and book your leads in seconds. When a call is not answered, the same AI follows up by text or WhatsApp until the lead is booked, and it runs as chat on your website too. One intelligence, every channel. You only pay when we deliver.
                 </p>
                 <div className="hero-cta-group">
                     <button type="button" onClick={onOpenCalculator} className="btn-primary">Take the 30-Sec Test</button>
