@@ -1,6 +1,6 @@
 # Stellar Voice Agents
 
-> Best-in-class AI voice agents that call, qualify and book leads 24/7, with the same AI following up by text, WhatsApp and website chat. Voice first, every channel covered. Built for businesses where slow follow-up loses revenue: Real Estate, Solar, Healthcare, Finance, Trades and any team running ads or fielding inbound calls.
+> Best-in-class AI voice agents that call, qualify and book leads 24/7, with the same AI following up by text, WhatsApp and website chat. Voice first, every channel covered. Built for businesses where slow follow-up loses revenue: Real Estate, Hotels, Solar, Healthcare, Finance, Trades and any team running ads or fielding inbound calls.
 
 Stellar Voice Agents replaces slow, inconsistent, human-bottlenecked lead handling with AI agents that sound human, respond in seconds, and qualify and book around the clock. One agent, one prompt, one strategy, run across every channel: the agent that calls a lead is the same agent that texts them. Text vs WhatsApp is chosen automatically by the lead's country. The brand voice is direct, outcome-driven, no hype, no hedging.
 
@@ -21,7 +21,7 @@ Pricing is performance based: a low monthly retainer plus a fee per qualified bo
 
 ## Industries served
 
-Real Estate · Solar · Healthcare · Finance · Trades & Home Services · Marketing Agencies · Hospitality · Any lead-driven business where speed-to-lead matters.
+Real Estate · Hotels & Hospitality · Solar · Healthcare · Finance · Trades & Home Services · Marketing Agencies · Any lead-driven business where speed-to-lead matters.
 
 ## Case studies
 

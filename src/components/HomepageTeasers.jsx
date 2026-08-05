@@ -4,7 +4,7 @@
 
 import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Home, Sun, Stethoscope, DollarSign, Play, Pause } from 'lucide-react';
+import { Home, Hotel, Sun, Stethoscope, DollarSign, Play, Pause } from 'lucide-react';
 import useScrollReveal from '../hooks/useScrollReveal';
 import { track } from '../lib/analytics';
 import './HomepageTeasers.css';
@@ -94,6 +94,7 @@ export function AppointmentEngineTeaser() {
 // retired (no guide); the broader guide library lives at /guides.
 const industryItems = [
     { name: 'Real Estate', Icon: Home },
+    { name: 'Hotels', Icon: Hotel },
     { name: 'Solar Energy', Icon: Sun },
     { name: 'Healthcare', Icon: Stethoscope },
     { name: 'Finance', Icon: DollarSign }

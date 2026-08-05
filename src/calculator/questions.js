@@ -123,6 +123,7 @@ export const QUESTIONS = {
         helper: "We'll tune the numbers to your world.",
         options: [
             { id: 'realEstate', label: 'Real Estate', icon: '🏠' },
+            { id: 'hotels', label: 'Hotels / accommodation', icon: '🏨' },
             { id: 'health', label: 'Health / clinic', icon: '🩺' },
             { id: 'finance', label: 'Finance / advisory', icon: '📐' },
             { id: 'trades', label: 'Trades / home services', icon: '🔧' },

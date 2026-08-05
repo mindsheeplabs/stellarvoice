@@ -52,6 +52,8 @@ export const GUIDES = {
 // Insurance and Legal are retired (no guide).
 export const GUIDE_INDUSTRIES = [
     { id: 'real-estate', label: 'Real Estate', icon: '🏠', guide: 'real-estate' },
+    // Hotels folds into the Hospitality guide (front desk, bookings, busy lines).
+    { id: 'hotels', label: 'Hotels', icon: '🏨', guide: 'hospitality' },
     { id: 'solar', label: 'Solar', icon: '☀️', guide: 'home-services' },
     { id: 'home-services', label: 'Home Services & Trades', icon: '🔧', guide: 'home-services' },
     { id: 'healthcare', label: 'Healthcare', icon: '🩺', guide: 'healthcare' },
@@ -64,6 +66,7 @@ export const GUIDE_INDUSTRIES = [
 // post-quiz CTA can pre-select the right guide. null = let the visitor pick.
 export const QUIZ_INDUSTRY_TO_GUIDE = {
     realEstate: 'real-estate',
+    hotels: 'hospitality',
     health: 'healthcare',
     finance: 'finance',
     trades: 'home-services',
