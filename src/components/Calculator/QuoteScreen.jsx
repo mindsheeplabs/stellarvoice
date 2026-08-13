@@ -126,7 +126,7 @@ export default function QuoteScreen({ result, businessName, industry }) {
             <section className="quote-cta no-print-borders">
                 <p className="quote-cta-label">Ready to stop losing {fmt(monthlyRevenue)} every month?</p>
                 <button type="button" className="quote-cta-primary" onClick={handleBookDemo}>
-                    Book a Demo with Gary
+                    Book a 30-min demo with our AI voice specialist
                 </button>
                 <p className="quote-cta-secondary">
                     We will map exactly how to recover it on the call.
@@ -209,7 +209,7 @@ export function EnterpriseQuoteScreen({ result, businessName }) {
                     <li>Weekly strategy reviews with Gary</li>
                 </ul>
                 <button type="button" className="quote-cta-primary" onClick={handleBookCall}>
-                    Book a Call with Gary
+                    Book a call with our AI voice specialist
                 </button>
                 <p className="quote-print-url">
                     Calendar: calendly.com/garysarco1/30min

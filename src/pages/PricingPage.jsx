@@ -163,7 +163,7 @@ export default function PricingPage() {
                             <h2>Based on your quiz, we recommend a custom Enterprise partnership.</h2>
                             <p>
                                 At your volume and deal size, a standard plan doesn&apos;t do justice to the opportunity.
-                                Book a call with Gary to design your custom solution.
+                                Book a call with our AI voice specialist to design your custom solution.
                             </p>
                             <button
                                 type="button"
@@ -173,7 +173,7 @@ export default function PricingPage() {
                                     openCalendly(undefined, 'pricing-enterprise');
                                 }}
                             >
-                                Book a Call with Gary
+                                Book a call with our AI voice specialist
                             </button>
                         </div>
                     </section>
@@ -202,7 +202,7 @@ export default function PricingPage() {
                                     openCalendly(undefined, 'pricing-enterprise-inline');
                                 }}
                             >
-                                We build custom partnerships. Book a call with Gary.
+                                We build custom partnerships. Book a call with our AI voice specialist.
                             </button>
                         </p>
                     </div>
@@ -288,7 +288,7 @@ export default function PricingPage() {
                     <div className="container">
                         <div className="pp-pilot-box">
                             <h2>Not sure? Start with a 30-Day Pilot.</h2>
-                            <p>Talk to Gary about a pilot. Full features, performance-based pricing from day one. Cancel anytime.</p>
+                            <p>Talk to our AI voice specialist about a pilot. Full features, performance-based pricing from day one. Cancel anytime.</p>
                             <button
                                 type="button"
                                 className="btn-primary"
@@ -317,7 +317,7 @@ export default function PricingPage() {
                                 className="pp-text-link"
                                 onClick={() => openCalendly(undefined, 'pricing-final-cta')}
                             >
-                                book a demo directly with Gary
+                                book a demo directly with our AI voice specialist
                             </button>
                         </p>
                     </div>

@@ -136,10 +136,10 @@ function buildClientHtml(answers, result) {
     <div style="padding:28px 24px">
       <p style="margin:0 0 16px;font-size:16px;line-height:1.55">Thanks for taking the test. Based on your answers, that's roughly what slow follow-up, missed calls, and after-hours enquiries are quietly costing ${businessName} every month.</p>
 
-      <p style="margin:0 0 16px;font-size:16px;line-height:1.55">Here's the next step: a 30-minute call with Gary. He'll walk you through exactly how a Stellar voice agent would engage, qualify, and book that revenue back — using your real numbers, not estimates.</p>
+      <p style="margin:0 0 16px;font-size:16px;line-height:1.55">Here's the next step: a 30-minute demo with our AI voice specialist, who will walk you through exactly how a Stellar voice agent would engage, qualify, and book that revenue back, using your real numbers, not estimates.</p>
 
       <div style="text-align:center;margin:28px 0">
-        <a href="https://calendly.com/garysarco1/30min" style="display:inline-block;background:#25005D;color:#fff;padding:16px 36px;border-radius:999px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;font-size:14px;text-decoration:none">Book a Demo with Gary →</a>
+        <a href="https://calendly.com/garysarco1/30min" style="display:inline-block;background:#25005D;color:#fff;padding:16px 36px;border-radius:999px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;font-size:14px;text-decoration:none">Book a 30-min demo with our AI voice specialist →</a>
       </div>
 
       <p style="margin:0;font-size:13px;color:#777;line-height:1.55">Estimates use the SVA pillar metrics: 3× speed-to-lead, +120% qualified leads, +45% coverage uplift. We'll tune them to your actual data on the call.</p>

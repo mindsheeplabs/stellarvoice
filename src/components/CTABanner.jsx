@@ -11,8 +11,8 @@ const CTABanner = () => {
             <div className="container cta-banner-content reveal" ref={ref}>
                 <h2>Never lose another lead.</h2>
                 <p>
-                    Book a 30-minute demo with Gary and hear exactly how AI voice agents can engage, qualify,
-                    and book appointments for your team. 24/7.
+                    Book a 30-minute demo with our AI voice specialist and hear exactly how AI voice agents
+                    can engage, qualify, and book appointments for your team. 24/7.
                 </p>
                 <p className="cta-banner-trust">
                     Performance-based pricing. You only pay when we deliver qualified bookings.

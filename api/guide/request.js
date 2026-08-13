@@ -79,9 +79,9 @@ function guideEmailHtml(guide, name) {
       <p style="margin:0 0 20px;font-size:13px;color:#777;line-height:1.55;text-align:center">Or paste this link into your browser:<br><a href="${pdfUrl}" style="color:#7868F8;word-break:break-all">${pdfUrl}</a></p>
 
       <div style="margin:24px 0;padding:20px;background:#F5F2FF;border-radius:12px">
-        <p style="margin:0 0 12px;font-size:15px;line-height:1.55;color:#25005D"><strong>Want this set up for your business?</strong> If you would like one of our team to walk you through exactly what an AI voice agent would do for your ${escapeHtml(guide.industry.toLowerCase())} business, book a quick 30-minute call.</p>
+        <p style="margin:0 0 12px;font-size:15px;line-height:1.55;color:#25005D"><strong>Want this set up for your business?</strong> If you would like our AI voice specialist to walk you through exactly what an AI voice agent would do for your ${escapeHtml(guide.industry.toLowerCase())} business, book a quick 30-minute demo.</p>
         <div style="text-align:center">
-          <a href="${CALENDLY_URL}" style="display:inline-block;background:#25005D;color:#fff;padding:14px 32px;border-radius:999px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;font-size:13px;text-decoration:none">Book a call with Gary &rarr;</a>
+          <a href="${CALENDLY_URL}" style="display:inline-block;background:#25005D;color:#fff;padding:14px 32px;border-radius:999px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;font-size:13px;text-decoration:none">Book a demo with our AI voice specialist &rarr;</a>
         </div>
       </div>
     </div>
