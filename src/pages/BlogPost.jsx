@@ -111,7 +111,7 @@ function Section({ section }) {
         case 'ctaInline':
             return (
                 <div className="bp-cta-inline">
-                    <Link to="/?openCalc=1" className="bp-cta-inline-link">
+                    <Link to="/#quiz" className="bp-cta-inline-link">
                         {section.text} &rarr;
                     </Link>
                 </div>

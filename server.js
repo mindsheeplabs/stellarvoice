@@ -4,7 +4,7 @@
 import express from 'express'
 import compression from 'compression'
 import { Resend } from 'resend'
-import { readdirSync, statSync, existsSync } from 'node:fs'
+import { readdirSync, statSync, existsSync, readFileSync } from 'node:fs'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { dirname, join, relative, sep } from 'node:path'
 import { verifyLead, parseCookies, returnSetCookies, LEAD_COOKIE, SEEN_COOKIE } from './api/_lib/leadCookie.js'
@@ -102,6 +102,24 @@ app.use((req, res, next) => {
   next()
 })
 
+// Old case-study address: permanent redirect (the duplicate page split ranking signals).
+app.get(['/case-studies/easystart-homes', '/case-studies/easystart-homes/'], (req, res) => res.redirect(301, '/case-studies/denes-aldott'))
+
+// One address per page: /about/ -> /about (keeps the query string).
+app.use((req, res, next) => {
+  if (req.path.length > 1 && req.path.endsWith('/') && !req.path.startsWith('/api/')) {
+    const q = req.originalUrl.slice(req.path.length)
+    return res.redirect(301, req.path.replace(/\/+$/, '') + q)
+  }
+  next()
+})
+
+// HTTPS only, remembered by browsers for a year.
+app.use((req, res, next) => {
+  res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains')
+  next()
+})
+
 // ---- static frontend + SPA fallback ----
 const distDir = join(__dirname, 'dist')
 // Cache policy (express.static defaults to max-age=0, i.e. re-download everything
@@ -109,6 +127,7 @@ const distDir = join(__dirname, 'dist')
 // cache forever; everything else gets a short cache and index.html must never stick.
 app.use(express.static(distDir, {
   index: false,
+  redirect: false,   // pages are folders now (dist/about/index.html); never bounce /about to /about/
   setHeaders(res, path) {
     if (path.includes(`${sep}assets${sep}`)) {
       res.setHeader('Cache-Control', 'public, max-age=31536000, immutable')
@@ -119,12 +138,17 @@ app.use(express.static(distDir, {
     }
   },
 }))
+// Pages are pre-rendered (scripts/prerender.mjs). Known pages get their own HTML with a 200;
+// anything else is a real 404, so search engines don't index made-up addresses.
+const knownRoutes = new Set(JSON.parse(readFileSync(join(distDir, 'routes.json'), 'utf8')))
 app.use((req, res) => {
-  if (!req.path.startsWith('/api/')) {
-    res.setHeader('Cache-Control', 'no-cache')   // SPA shell: always revalidate
-    return res.sendFile(join(distDir, 'index.html'))
+  if (req.path.startsWith('/api/')) return res.status(404).json({ ok: false, error: 'Not found' })
+  const route = req.path.replace(/\/$/, '') || '/'
+  res.setHeader('Cache-Control', 'no-cache')   // HTML: always revalidate
+  if (knownRoutes.has(route)) {
+    return res.sendFile(route === '/' ? join(distDir, 'index.html') : join(distDir, route.slice(1), 'index.html'))
   }
-  res.status(404).json({ ok: false, error: 'Not found' })
+  res.status(404).sendFile(join(distDir, '404.html'))
 })
 
 const port = process.env.PORT || 3000

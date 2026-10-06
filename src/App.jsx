@@ -48,9 +48,9 @@ function ScrollToTop() {
   return null;
 }
 
-function App() {
+export function AppRoutes() {
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <VisitBeacon />
       <div className="app-container">
@@ -72,6 +72,14 @@ function App() {
           <Route path="/case-studies/easystart-homes" element={<CaseStudyEasyStart />} />
         </Routes>
       </div>
+    </>
+  )
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppRoutes />
     </BrowserRouter>
   )
 }

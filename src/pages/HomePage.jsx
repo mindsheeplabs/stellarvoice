@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import QuoteBar from '../components/QuoteBar';
@@ -29,6 +29,13 @@ import Footer from '../components/Footer';
 //   -> Industries strip -> Plan Finder CTA -> Team -> FAQ -> CTABanner
 export default function HomePage() {
     const [calcOpen, setCalcOpen] = useState(false);
+
+    // Links can open the quiz straight away: /#quiz (blog CTAs), or the older /?openCalc=1.
+    useEffect(() => {
+        if (window.location.hash === '#quiz' || new URLSearchParams(window.location.search).has('openCalc')) {
+            setCalcOpen(true);
+        }
+    }, []);
 
     return (
         <>
