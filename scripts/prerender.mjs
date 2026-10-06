@@ -33,7 +33,9 @@ function metaFor(route) {
 }
 
 const page = (route, html) => {
-  let out = template.replace('<div id="root"></div>', `<div id="root">${html}</div>`)
+  // email_off: stops Cloudflare's email obfuscation rewriting addresses into /cdn-cgi/l/email-protection
+  // links (crawlers see those as broken). The markers sit outside #root so hydration is unaffected.
+  let out = template.replace('<div id="root"></div>', `<!--email_off--><div id="root">${html}</div><!--/email_off-->`)
   const m = metaFor(route)
   const url = SITE + (route === '/' ? '/' : route)
   out = out.replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${url}" />`)
