@@ -6,5 +6,6 @@ Crawl-delay: 1
 
 # Block API endpoints from indexing
 Disallow: /api/
+Disallow: /preview/
 
 Sitemap: https://www.stellarvoiceagents.com/sitemap.xml
