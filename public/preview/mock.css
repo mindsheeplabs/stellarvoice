@@ -177,3 +177,43 @@ table.incl { width: 100%; border-collapse: separate; border-spacing: 0; margin-t
 .cmp tr.grp td { background: var(--tint); color: var(--royal); font-weight: 700; font-size: 13px; width: auto; }
 .duel td:first-child { width: 26%; }
 .duel td { width: 37%; }
+
+/* guide layout v2: readable prose column, wide breakouts for dense blocks */
+.article { font-size: 17px; line-height: 1.75; }
+.article h2 { font-size: clamp(29px, 3.2vw, 38px); margin-top: 84px; line-height: 1.14; letter-spacing: -0.025em; }
+.article > p { font-size: 17px; margin-top: 16px; }
+.article .section-intro { max-width: 680px; margin-bottom: 8px; }
+.article-wide { width: min(calc(100vw - 48px), 1120px); margin-left: 50%; transform: translateX(-50%); margin-top: 32px; }
+.criteria { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin-top: 0; }
+.criteria div { padding: 26px 28px 28px; border: 1px solid #DDD7F5; border-radius: 18px; background: var(--tint); display: grid; grid-template-columns: 44px 1fr; column-gap: 18px; align-items: start; }
+.criteria em { grid-row: span 2; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 13px; background: var(--violet); color: #fff; font-style: normal; font-weight: 700; font-size: 16px; }
+.criteria b { font-size: 20px; line-height: 1.25; }
+.criteria span { font-size: 16px; line-height: 1.6; margin-top: 6px; }
+.options { gap: 22px; margin-top: 0; align-items: stretch; }
+.options div { padding: 30px 28px; border: 1px solid #DDD7F5; border-radius: 18px; background: #fff; }
+.options .pick { box-shadow: 0 12px 32px rgba(37,0,93,0.10); }
+.options h3 { font-size: 21px; line-height: 1.2; margin: 12px 0 10px; }
+.options p { font-size: 15.5px; line-height: 1.6; }
+.options .lbl { display: inline-flex; padding: 5px 11px; border-radius: 999px; background: #ECE8FB; color: var(--royal); font-size: 12px; font-weight: 700; }
+.options .pick .lbl { background: var(--navy); color: #fff; }
+.cmp-scroll { overflow-x: auto; border: 1px solid #DDD7F5; border-radius: 18px; background: #fff; box-shadow: 0 8px 24px rgba(37,0,93,0.06); -webkit-overflow-scrolling: touch; }
+.cmp-scroll table.cmp { margin-top: 0; border: none; border-radius: 0; min-width: 1060px; table-layout: fixed; font-size: 14px; overflow: visible; display: table; }
+.cmp-scroll .cmp th, .cmp-scroll .cmp td { padding: 15px 14px; line-height: 1.35; text-align: center; vertical-align: middle; border-right: 1px solid #EBE7F7; }
+.cmp-scroll .cmp thead th { background: var(--navy); color: #fff; font-size: 13.5px; padding-block: 18px; }
+.cmp-scroll .cmp thead th.us { background: var(--violet); }
+.cmp-scroll .cmp th:first-child, .cmp-scroll .cmp td:first-child { text-align: left; width: 200px; position: sticky; left: 0; z-index: 2; background: #fff; box-shadow: 5px 0 10px rgba(37,0,93,0.06); }
+.cmp-scroll .cmp thead th:first-child { background: var(--navy); z-index: 3; }
+.cmp-scroll .cmp td.us { background: var(--tint); border-inline: 2px solid var(--violet); }
+.cmp-scroll .cmp tr.grp td { text-align: left; background: #ECE8FB; position: static; box-shadow: none; }
+.cmp s { color: var(--mute); font-weight: 400; }
+.cmp .none { color: var(--red); font-weight: 600; }
+.swipe-hint { display: none; font-size: 13px; color: var(--mute); text-align: right; margin-top: 10px; }
+.article .honest, .article .faq { margin-top: 28px; }
+@media (max-width: 850px) { .options { grid-template-columns: 1fr; } }
+@media (max-width: 700px) {
+  .article { font-size: 16px; line-height: 1.7; } .article h2 { margin-top: 60px; }
+  .article-wide { width: calc(100vw - 32px); }
+  .criteria { grid-template-columns: 1fr; gap: 14px; } .criteria div { padding: 20px; grid-template-columns: 38px 1fr; column-gap: 14px; } .criteria em { width: 38px; height: 38px; } .criteria b { font-size: 18px; }
+  .cmp-scroll table.cmp { min-width: 940px; font-size: 13px; } .cmp-scroll .cmp th:first-child, .cmp-scroll .cmp td:first-child { width: 150px; } .cmp-scroll .cmp th, .cmp-scroll .cmp td { padding: 13px 10px; }
+  .swipe-hint { display: block; }
+}
