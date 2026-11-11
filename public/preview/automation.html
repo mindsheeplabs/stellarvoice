@@ -13,12 +13,13 @@
 .arrows { display: flex; gap: 10px; flex-shrink: 0; }
 .arrows button { width: 46px; height: 46px; border-radius: 999px; border: 1px solid var(--line); background: #fff; color: var(--navy); font-size: 20px; cursor: pointer; }
 .scroller { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 6px 2px 22px; margin-top: 30px; scrollbar-width: thin; }
-.tile { flex: 0 0 310px; scroll-snap-align: start; background: #fff; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; }
-.tile img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
-.tile div { padding: 20px 22px 24px; }
-.tile span { font-size: 12.5px; font-weight: 700; color: var(--royal); }
-.tile h3 { font-size: 19px; color: var(--navy); line-height: 1.25; margin: 6px 0 8px; }
-.tile p { font-size: 14.5px; color: #4b4660; }
+.tile { flex: 0 0 300px; scroll-snap-align: start; background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 28px 26px 30px; }
+.tile i { display: grid; place-items: center; width: 58px; height: 58px; border-radius: 16px; background: var(--tint); color: var(--violet); }
+.tile i svg { width: 30px; height: 30px; }
+.tile h3 { font-size: 26px; color: var(--navy); line-height: 1.15; margin: 18px 0 6px; letter-spacing: -0.02em; }
+.tile b { display: block; font-size: 15.5px; color: var(--royal); font-weight: 600; }
+.tile p { font-size: 14.5px; color: #4b4660; margin-top: 10px; }
+.ticks li b { color: var(--navy); }
 .more { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 30px; }
 .more div { background: #fff; border-radius: 18px; padding: 24px; border: 1px solid var(--line); }
 .more b { display: block; color: var(--navy); font-size: 17px; line-height: 1.3; }
@@ -36,12 +37,23 @@
       <ul><li><a href="home.html#how">How it works</a></li><li><a href="home.html#pricing">Pricing</a></li><li><a href="automation.html">Automation</a></li><li><a href="best-ai-receptionist.html">Guides</a></li><li><a href="home.html#hear">Hear a call</a></li></ul>
       <a class="btn small" href="#talk">Book a 15 minute call</a>
     </div>
-    <div style="margin-top:44px">
-      <div class="kicker">Automation for HVAC, roofing and plumbing companies</div>
-      <h1>Got an admin job you do over and over? We can automate it.</h1>
-      <p class="lead">Invoices, follow-ups, reports, typing the same thing into two systems. Tell us the job and we build something that does it for you.</p>
-      <button class="btn" onclick="document.getElementById('auto').showModal()">Tell us what you want automated</button>
-      <a class="btn line" href="#talk">Book a 15 minute call</a>
+    <div class="hero-grid" style="margin-top:34px">
+      <div>
+        <div class="kicker">Automation for HVAC, roofing and plumbing companies</div>
+        <h1>If you do it over and over, we can automate it.</h1>
+        <ul class="ticks">
+          <li><b>Admin.</b> Invoices, data entry and paperwork.</li>
+          <li><b>Follow-up.</b> Quotes, new leads and reminders.</li>
+          <li><b>Reporting.</b> Your numbers, every week, without a spreadsheet.</li>
+        </ul>
+        <button class="btn" onclick="document.getElementById('auto').showModal()">Tell us what you want automated</button>
+        <a class="btn line" href="#talk">Book a 15 minute call</a>
+      </div>
+      <div class="hero-fade">
+        <img src="img/desk-1.jpg" alt="An office manager at her desk with a stack of invoices, smiling at the camera.">
+        <img src="img/desk-2.jpg" alt="A roofing company owner at his desk with a laptop and quotes, smiling at the camera.">
+        <img src="img/desk-3.jpg" alt="A scheduler at her desk with two screens, smiling at the camera.">
+      </div>
     </div>
   </div>
 </div>
@@ -51,7 +63,7 @@
     <div class="scroll-head">
       <div>
         <h2>Jobs we can take off your hands</h2>
-        <p class="lead">A few examples. Scroll across to see more.</p>
+        <p class="lead">A few examples. Use the arrows to see more.</p>
       </div>
       <div class="arrows">
         <button aria-label="Back" onclick="document.getElementById('sc').scrollBy({left:-330,behavior:'smooth'})">&larr;</button>
@@ -59,12 +71,12 @@
       </div>
     </div>
     <div class="scroller" id="sc">
-      <div class="tile"><img src="img/hero-1.jpg" alt="An HVAC business owner leaning on his work van"><div><span>Invoicing</span><h3>Job done, invoice sent</h3><p>When a job is marked finished, the invoice is written and sent. No more Sunday night paperwork.</p></div></div>
-      <div class="tile"><img src="img/hero-2.jpg" alt="A woman in a hi-vis vest holding a clipboard"><div><span>Follow-up</span><h3>Every quote gets chased</h3><p>Open quotes get a follow-up message on the days you choose, until the customer says yes or no.</p></div></div>
-      <div class="tile"><img src="img/hvac-tech.jpg" alt="An HVAC technician working on an outdoor unit"><div><span>Data entry</span><h3>Type it once</h3><p>Customer and job details move between your systems on their own. Nobody copies and pastes.</p></div></div>
-      <div class="tile"><img src="img/hero-3.jpg" alt="A plumbing company owner in front of his truck"><div><span>Reports</span><h3>Your numbers, every week</h3><p>Jobs booked, jobs done and money owed, sent to you each week without anyone building a spreadsheet.</p></div></div>
-      <div class="tile"><img src="img/roofer.jpg" alt="A roofer working on a roof"><div><span>Scheduling</span><h3>Reminders that send themselves</h3><p>Customers get a reminder before the visit, and your crew gets the job details the night before.</p></div></div>
-      <div class="tile"><img src="img/plumber.jpg" alt="A plumber fixing a toilet"><div><span>Email</span><h3>The same email, written for you</h3><p>The replies you send again and again are drafted and ready, so you only press send.</p></div></div>
+      <div class="tile"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg></i><h3>Invoicing</h3><b>Job done, invoice sent</b><p>When a job is marked finished, the invoice is written and sent. No more Sunday night paperwork.</p></div>
+      <div class="tile"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></i><h3>Follow-up</h3><b>Every quote gets chased</b><p>Open quotes get a follow-up message on the days you choose, until the customer says yes or no.</p></div>
+      <div class="tile"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></svg></i><h3>Data entry</h3><b>Type it once</b><p>Customer and job details move between your systems on their own. Nobody copies and pastes.</p></div>
+      <div class="tile"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15v-4M12 15V7M17 15v-6"/></svg></i><h3>Reports</h3><b>Your numbers, every week</b><p>Jobs booked, jobs done and money owed, sent to you each week without anyone building a spreadsheet.</p></div>
+      <div class="tile"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></i><h3>Scheduling</h3><b>Reminders that send themselves</b><p>Customers get a reminder before the visit, and your crew gets the job details the night before.</p></div>
+      <div class="tile"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></i><h3>Email</h3><b>The same email, written for you</b><p>The replies you send again and again are drafted and ready, so you only press send.</p></div>
     </div>
   </div>
 </section>
@@ -131,5 +143,18 @@
     <button class="btn" type="submit">Send it to us</button>
   </form>
 </dialog>
+<script>
+(function () {
+  var sc = document.getElementById('sc'), paused = false;
+  ['mouseenter', 'touchstart', 'focusin'].forEach(function (e) { sc.addEventListener(e, function () { paused = true; }); });
+  ['mouseleave', 'touchend', 'focusout'].forEach(function (e) { sc.addEventListener(e, function () { paused = false; }); });
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  setInterval(function () {
+    if (paused) return;
+    var end = sc.scrollLeft + sc.clientWidth >= sc.scrollWidth - 8;
+    sc.scrollTo({ left: end ? 0 : sc.scrollLeft + 320, behavior: 'smooth' });
+  }, 3500);
+})();
+</script>
 </body>
 </html>
