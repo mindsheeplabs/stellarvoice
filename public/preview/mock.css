@@ -247,3 +247,19 @@ dialog.try::backdrop { background: rgba(21,0,53,0.55); }
 @media (max-width: 760px) { .trybar { flex-direction: column; align-items: flex-start; padding: 24px; } .hero .btn + .btn { margin-left: 0; margin-top: 10px; } .hero .btn { display: block; text-align: center; width: 100%; } .hero-collage { margin-top: 8px; } }
 
 .fairuse { font-size: 13.5px; color: var(--mute); margin-top: 20px; max-width: 760px; }
+
+/* hero: one frame, three people, slow fade */
+.hero-fade { position: relative; aspect-ratio: 4/5; border-radius: 22px; overflow: hidden; box-shadow: 0 4px 8px rgba(37,0,93,0.16), 0 30px 60px -20px rgba(37,0,93,0.38); background: var(--tint); }
+.hero-fade img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: herofade 18s infinite; }
+.hero-fade img:nth-child(1) { animation-delay: 0s; }
+.hero-fade img:nth-child(2) { animation-delay: 6s; }
+.hero-fade img:nth-child(3) { animation-delay: 12s; }
+@keyframes herofade { 0% { opacity: 0; } 5% { opacity: 1; } 33% { opacity: 1; } 39% { opacity: 0; } 100% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .hero-fade img { animation: none; } .hero-fade img:first-child { opacity: 1; } }
+.winner { margin-top: 28px; background: linear-gradient(160deg, var(--navy), var(--royal)); color: #fff; border-radius: 22px; padding: 34px 36px; }
+.winner p { font-size: 18px; line-height: 1.6; }
+.winner ul { list-style: none; margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 28px; }
+.winner li { position: relative; padding-left: 30px; font-size: 16px; }
+.winner li::before { content: ''; position: absolute; left: 4px; top: 9px; width: 11px; height: 6px; border-left: 2.5px solid var(--lilac); border-bottom: 2.5px solid var(--lilac); transform: rotate(-45deg); }
+.winner .btn { background: #fff; color: var(--navy); margin-top: 24px; }
+@media (max-width: 700px) { .winner { padding: 26px 22px; } .winner ul { grid-template-columns: 1fr; } }

@@ -31,10 +31,10 @@
         <a class="btn line" href="#demo">Book a 15 minute demo</a>
         <p class="price-note">$297 a month for up to 300 calls, CRM integration included. No charge per minute. No set-up fee on a 3 month plan.</p>
       </div>
-      <div class="hero-collage">
+      <div class="hero-fade">
         <img src="img/hero-1.jpg" alt="An HVAC business owner leaning on his work van, smiling at the camera.">
-        <img src="img/hero-2.jpg" alt="A woman in a hi-vis vest holding a clipboard beside a work van, smiling at the camera.">
-        <img src="img/hero-3.jpg" alt="A plumbing company owner standing by his pickup truck, smiling at the camera.">
+        <img src="img/hero-2.jpg" alt="A woman in a hi-vis vest holding a clipboard in front of a work van, smiling at the camera.">
+        <img src="img/hero-3.jpg" alt="A plumbing company owner standing in front of his pickup truck, smiling at the camera.">
       </div>
     </div>
   </div>
@@ -46,7 +46,7 @@
     <p class="lead">You cannot pick up when you are on a roof or under a sink. The caller does not wait. They ring the next company.</p>
     <div class="people">
       <div class="person"><img src="img/hvac-tech.jpg" alt="An HVAC technician servicing an outdoor unit"><div><h3>HVAC</h3><p>The no-cool call at 9 pm gets answered and booked for the morning.</p></div></div>
-      <div class="person"><img src="img/roofer.jpg" alt="A roofer standing in front of a house he is working on, smiling at the camera"><div><h3>Roofing</h3><p>Storm week calls are caught and sorted, so the urgent ones reach you first.</p></div></div>
+      <div class="person"><img src="img/roofer.jpg" alt="A roofer kneeling on a roof with a nail gun, smiling at the camera"><div><h3>Roofing</h3><p>Storm week calls are caught and sorted, so the urgent ones reach you first.</p></div></div>
       <div class="person"><img src="img/plumber.jpg" alt="A plumber working under a kitchen sink, smiling at the camera"><div><h3>Plumbing</h3><p>Hands full? The call is taken and the job details are written down for you.</p></div></div>
     </div>
     <div class="trybar">
@@ -240,16 +240,13 @@
 </section>
 <footer><div class="wrap">Design preview for review. Stellar Voice Agents.</div></footer>
 <dialog class="try" id="try">
-  <form class="try-in" method="dialog" onsubmit="event.preventDefault();this.innerHTML='<h3>Thanks. We are on it.</h3><p>We will text you a number to call within one business day, so you can hear your own receptionist answer as your company.</p>';">
+  <form class="try-in" method="dialog" onsubmit="event.preventDefault();this.innerHTML='<h3>Thanks. We are on it.</h3><p>We will email you a number to call within one business day, so you can hear your own receptionist answer as your company.</p>';">
     <button type="button" class="x" onclick="document.getElementById('try').close()" aria-label="Close">&times;</button>
     <h3>Get your own receptionist to try</h3>
     <p>Tell us about your company. We build one for you and send you a number to call. Free, no card.</p>
     <label>Your name<input required name="name" autocomplete="name"></label>
-    <label>Company name<input required name="company" autocomplete="organization"></label>
-    <label>Mobile number<input required name="phone" type="tel" autocomplete="tel"></label>
     <label>Email<input required name="email" type="email" autocomplete="email"></label>
-    <label>Website (if you have one)<input name="website" placeholder="yourcompany.com"></label>
-    <label>Your trade<select name="trade"><option>HVAC</option><option>Roofing</option><option>Plumbing</option><option>Electrical</option><option>Other</option></select></label>
+    <label>Company name (optional)<input name="company" autocomplete="organization"></label>
     <button class="btn" type="submit">Build my receptionist</button>
     <small>Prefer to talk first? <a href="#demo" onclick="document.getElementById('try').close()">Book a 15 minute demo</a></small>
   </form>
