@@ -56,6 +56,8 @@ export function AppRoutes() {
       <div className="app-container">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          {/* The earlier home page. "/" itself is now served by the trades home page (see server.js). */}
+          <Route path="/classic" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/how-it-works" element={<HowItWorksPage />} />
           <Route path="/pricing" element={<PricingPage />} />

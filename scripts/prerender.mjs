@@ -14,9 +14,11 @@ const { render } = await import(pathToFileURL(join(root, 'dist-ssr', 'entry-serv
 
 const sitemap = readFileSync(join(root, 'public', 'sitemap.xml'), 'utf8')
 // Pages the app serves that are deliberately left out of the sitemap.
-const EXTRA = ['/pricing']
+const EXTRA = ['/pricing', '/classic']
+// Plain-HTML pages served straight from public/site by server.js: in the sitemap, not rendered by React.
+const STATIC = ['/automation', '/resources', '/best-ai-receptionist-for-hvac']
 const fromSitemap = [...sitemap.matchAll(/<loc>https?:\/\/[^/]+(\/[^<]*)<\/loc>/g)].map((m) => m[1].replace(/\/$/, '') || '/')
-const routes = [...new Set([...fromSitemap, ...EXTRA])]
+const routes = [...new Set([...fromSitemap, ...EXTRA])].filter((r) => !STATIC.includes(r))
 
 const SITE = 'https://www.stellarvoiceagents.com'
 const attr = (v) => v.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')
@@ -47,6 +49,11 @@ const page = (route, html) => {
       out = out.replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${attr(m.title)}" />`)
                .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${attr(m.description)}" />`)
     }
+  }
+  // The earlier home page is kept for reference only: keep it out of search.
+  if (route === '/classic') {
+    out = out.replace('</title>', '</title><meta name="robots" content="noindex" />')
+             .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE}/" />`)
   }
   return out
 }

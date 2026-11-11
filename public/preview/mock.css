@@ -282,3 +282,10 @@ button.play { border: 0; cursor: pointer; }
 .player.is-playing .play { animation: ppulse 1.6s ease-out infinite; }
 @keyframes ppulse { 0% { box-shadow: 0 0 0 0 rgba(37,0,93,0.45); } 100% { box-shadow: 0 0 0 16px rgba(37,0,93,0); } }
 @media (prefers-reduced-motion: reduce) { .player.is-playing .wave i, .player.is-playing .play { animation: none; } }
+
+/* live footer + form error */
+.footrow { display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 26px; }
+.footrow nav { display: flex; gap: 22px; flex-wrap: wrap; }
+.footrow a { color: var(--royal); text-decoration: none; font-weight: 500; }
+.form-err { color: var(--red) !important; font-size: 13.5px !important; margin-top: 10px !important; min-height: 0; }
+.form-err:empty { display: none; }

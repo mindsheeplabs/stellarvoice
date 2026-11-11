@@ -120,6 +120,13 @@ app.use((req, res, next) => {
   next()
 })
 
+const RAW_TRADES = { '/': 'home.html', '/automation': 'automation.html', '/resources': 'guides.html', '/best-ai-receptionist-for-hvac': 'best-ai-receptionist.html' }
+// The raw files are not pages in their own right: send visitors to the real address.
+app.get('/site/:file.html', (req, res, next) => {
+  const hit = Object.entries(RAW_TRADES).find(([, f]) => f === `${req.params.file}.html`)
+  return hit ? res.redirect(301, hit[0]) : next()
+})
+
 // ---- static frontend + SPA fallback ----
 const distDir = join(__dirname, 'dist')
 // Cache policy (express.static defaults to max-age=0, i.e. re-download everything
@@ -143,6 +150,15 @@ app.use(express.static(distDir, {
 // Pages are pre-rendered (scripts/prerender.mjs). Known pages get their own HTML with a 200;
 // anything else is a real 404, so search engines don't index made-up addresses.
 const knownRoutes = new Set(JSON.parse(readFileSync(join(distDir, 'routes.json'), 'utf8')))
+
+// Trades site (Nov 2026): the home page and three new pages are plain HTML built from
+// sva-site-plan (public/site/). The earlier React home page lives on at /classic, and every
+// other earlier page keeps its address.
+const TRADES_PAGES = RAW_TRADES
+app.get(Object.keys(TRADES_PAGES), (req, res) => {
+  res.setHeader('Cache-Control', 'no-cache')   // HTML: always revalidate
+  res.sendFile(join(distDir, 'site', TRADES_PAGES[req.path]))
+})
 app.use((req, res) => {
   if (req.path.startsWith('/api/')) return res.status(404).json({ ok: false, error: 'Not found' })
   const route = req.path.replace(/\/$/, '') || '/'
