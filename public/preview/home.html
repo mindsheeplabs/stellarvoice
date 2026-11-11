@@ -63,11 +63,12 @@
       <p class="lead">A homeowner rings at night with no cooling. Listen to how the call is handled and the visit is booked.</p>
     </div>
     <div class="player">
-      <div class="play"></div>
+      <button class="play" id="pbtn" aria-label="Play the demo call" onclick="var a=document.getElementById('demoaudio');if(a.paused){a.play();this.classList.add('on')}else{a.pause();this.classList.remove('on')}"></button>
       <div style="flex:1">
-        <b>After-hours HVAC call</b>
-        <span>1 min 48 sec · booked for the next morning</span>
+        <b>After-hours HVAC call <em class="demo-tag">Demo call</em></b>
+        <span>1 min 19 sec · booked for the next morning</span>
         <div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <audio id="demoaudio" src="audio/hvac-after-hours-demo.mp3" preload="none" onended="document.getElementById('pbtn').classList.remove('on')"></audio>
       </div>
     </div>
   </div>
