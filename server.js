@@ -129,7 +129,9 @@ app.use(express.static(distDir, {
   index: false,
   redirect: false,   // pages are folders now (dist/about/index.html); never bounce /about to /about/
   setHeaders(res, path) {
-    if (path.includes(`${sep}assets${sep}`)) {
+    if (path.includes(`${sep}preview${sep}`)) {
+      res.setHeader('Cache-Control', 'no-cache')   // design previews change many times a day: always revalidate
+    } else if (path.includes(`${sep}assets${sep}`)) {
       res.setHeader('Cache-Control', 'public, max-age=31536000, immutable')
     } else if (path.endsWith('index.html')) {
       res.setHeader('Cache-Control', 'no-cache')
