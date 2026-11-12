@@ -16,7 +16,7 @@ const sitemap = readFileSync(join(root, 'public', 'sitemap.xml'), 'utf8')
 // Pages the app serves that are deliberately left out of the sitemap.
 const EXTRA = ['/pricing', '/classic']
 // Plain-HTML pages served straight from public/site by server.js: in the sitemap, not rendered by React.
-const STATIC = ['/automation', '/resources', '/best-ai-receptionist-for-hvac']
+const STATIC = ['/automation', '/resources', '/ai-receptionist-for-hvac', '/ai-receptionist-for-plumbing', '/ai-receptionist-for-roofing']
 const fromSitemap = [...sitemap.matchAll(/<loc>https?:\/\/[^/]+(\/[^<]*)<\/loc>/g)].map((m) => m[1].replace(/\/$/, '') || '/')
 const routes = [...new Set([...fromSitemap, ...EXTRA])].filter((r) => !STATIC.includes(r))
 

@@ -309,3 +309,6 @@ button.play { border: 0; cursor: pointer; }
 .hero-fade.four img:nth-child(4) { animation-delay: 18s; }
 @keyframes herofade4 { 0% { opacity: 0; } 4% { opacity: 1; } 25% { opacity: 1; } 29% { opacity: 0; } 100% { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .hero-fade.four img { animation: none; } }
+
+.othertrades { font-size: 15px !important; margin-top: 40px !important; color: var(--mute) !important; }
+.othertrades a { color: var(--royal); font-weight: 600; }
