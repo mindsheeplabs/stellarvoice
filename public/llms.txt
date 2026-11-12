@@ -11,7 +11,26 @@ Stellar Voice Agents replaces slow, inconsistent, human-bottlenecked lead handli
 - **Inbound Sales Qualifier**: Answers every inbound call instantly 24/7, qualifies each caller, books qualified prospects directly into the calendar. Case study: a 24/7 AI receptionist acting as a zero-miss safety net for a boutique agency's overflow and after-hours calls.
 - **Appointment Engine**: The done-for-you funnel. Ads, AI calling and booking run as one managed system, priced around pilots.
 
-Pricing is performance based: a low monthly retainer plus a fee per qualified booking. No public rate card; pricing is scoped per business on a demo call.
+Pricing for the AI receptionist for trades is public (see below). Outbound and reactivation work is scoped per business on a demo call.
+
+## AI receptionist for HVAC, roofing and plumbing companies
+
+A done-for-you (managed) AI receptionist for trades companies in the United States. It answers the calls an owner misses, after hours and when the team is on a job, books the appointment into the company's calendar or CRM, puts emergencies through to the on-call person, and sends a text alert for every new lead.
+
+- **Standard**: $297 a month for up to 300 calls. **Growth**: $597 a month for up to 750 calls. Above that, a plan is agreed on a call.
+- No charge per minute and no overage fees. Fair use: if a company is over its limit two months in a row, Stellar talks with them about moving to the next plan.
+- Set-up is $100, or free on a 3 month plan. No contract; month to month.
+- Stellar's team does all of it: writes the call script, connects the CRM (included in the price), tests it, and makes every change afterwards. The owner does not log in to a dashboard.
+- A person reviews each company's real calls every week, and every call is checked by AI every day.
+- Set-up takes 24 to 48 hours.
+
+Pages:
+- Home: https://www.stellarvoiceagents.com/
+- AI receptionist for HVAC companies, with a comparison of done-for-you services: https://www.stellarvoiceagents.com/ai-receptionist-for-hvac
+- AI receptionist for plumbing companies: https://www.stellarvoiceagents.com/ai-receptionist-for-plumbing
+- AI receptionist for roofing companies: https://www.stellarvoiceagents.com/ai-receptionist-for-roofing
+- Automation for trades companies (invoicing, follow-up, reporting, data entry): https://www.stellarvoiceagents.com/automation
+- Guides: https://www.stellarvoiceagents.com/resources
 
 ## Why teams choose Stellar
 
