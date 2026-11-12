@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Design preview: three story-led home pages | Stellar Voice Agents</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mock.css?v=1794465531">
+<style>
+.vbar { background: #1F2937; color: #fff; font-size: 12.5px; text-align: center; padding: 7px 12px; }
+.vbar a { color: #C4B5FD; margin: 0 6px; }
+.dark { background: radial-gradient(900px 500px at 80% 0%, #3A1A8A 0%, #25005D 55%, #170038 100%); color: #fff; padding: 34px 0 84px; }
+.dark .nav ul { color: #E4DEFA; } .dark .logo img { filter: brightness(0) invert(1); } .dark .nav .btn.small { background: #fff; color: var(--navy); }
+.dark .kicker { color: var(--lilac); } .dark h1 { color: #fff; } .dark .sub { font-size: 21px; color: #E4DEFA; max-width: 620px; margin: 0 0 30px; line-height: 1.45; }
+.narrow { max-width: 760px; }
+.story p { font-size: 20px; line-height: 1.65; color: #2c2740; margin-top: 18px; }
+.story p b { color: var(--navy); }
+.story .big { font-size: 30px; line-height: 1.3; font-weight: 700; color: var(--navy); letter-spacing: -0.02em; margin-top: 34px; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 36px; }
+.tl { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 28px; }
+.tl.good { border: 2px solid var(--violet); box-shadow: 0 24px 50px -28px rgba(37,0,93,0.45); }
+.tl h3 { font-size: 18px; color: var(--navy); margin-bottom: 14px; }
+.tl ol { list-style: none; }
+.tl li { display: grid; grid-template-columns: 78px 1fr; gap: 12px; padding: 11px 0; border-top: 1px solid var(--line); font-size: 15.5px; color: #3d3852; }
+.tl li:first-child { border-top: 0; }
+.tl time { font-weight: 700; color: var(--royal); font-size: 14px; }
+.tl .end { margin-top: 14px; font-weight: 700; font-size: 15px; }
+.tl.bad .end { color: var(--red); } .tl.good .end { color: var(--green); }
+.belief { background: var(--navy); color: #fff; border-radius: 26px; padding: 48px; }
+.belief .lbl2 { font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--lilac); display: block; margin-bottom: 12px; }
+.belief h2 { color: #fff; font-size: 34px; max-width: 760px; }
+.belief p { font-size: 18px; opacity: 0.9; margin-top: 14px; max-width: 700px; }
+.src { font-size: 12.5px; color: var(--mute); margin-top: 14px; }
+.belief .src { color: #C9C2E8; }
+.offer { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; margin-top: 34px; }
+.people2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 36px; }
+.who { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 26px; display: flex; gap: 20px; align-items: center; }
+.avatar { flex: 0 0 120px; width: 120px; height: 120px; object-fit: cover; border-radius: 999px; background: linear-gradient(135deg, var(--navy), var(--violet)); color: #fff; display: grid; place-items: center; font-weight: 800; font-size: 30px; }
+.who b { display: block; font-size: 20px; color: var(--navy); } .who span { display: block; font-size: 14.5px; color: #4b4660; margin-top: 4px; }
+.who em { display: inline-block; font-style: normal; font-size: 11.5px; font-weight: 700; color: var(--royal); background: var(--tint); border-radius: 999px; padding: 3px 9px; margin-top: 8px; }
+.letter { background: #FFFDF8; border: 1px solid #EFE8D8; border-radius: 22px; padding: 44px 48px; margin-top: 30px; box-shadow: 0 24px 50px -34px rgba(37,0,93,0.35); }
+.letter p { font-size: 19px; line-height: 1.7; color: #2c2740; margin-top: 16px; }
+.letter .sign { font-weight: 700; color: var(--navy); margin-top: 26px; }
+.draft { display: inline-block; font-size: 11.5px; font-weight: 700; background: #FEF3C7; color: #92400E; border-radius: 999px; padding: 4px 10px; }
+.promises { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 34px; }
+.promises div { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 22px; }
+.promises b { display: block; color: var(--navy); font-size: 17px; line-height: 1.25; } .promises span { display: block; font-size: 14px; color: #4b4660; margin-top: 8px; }
+.beats { margin-top: 30px; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; background: #fff; }
+.beats div { display: grid; grid-template-columns: 70px 1fr; gap: 16px; padding: 16px 24px; border-top: 1px solid var(--line); font-size: 16px; color: #3d3852; }
+.beats div:first-child { border-top: 0; } .beats time { font-weight: 700; color: var(--violet); } .beats b { color: var(--navy); }
+.case { display: grid; grid-template-columns: 1.1fr 1fr; gap: 0; background: #fff; border: 1px solid var(--line); border-radius: 22px; overflow: hidden; margin-top: 34px; }
+.case > div { padding: 36px 38px; } .case .q { background: var(--tint); display: flex; flex-direction: column; justify-content: center; }
+.case .q p { font-size: 24px; line-height: 1.35; font-weight: 600; color: var(--navy); letter-spacing: -0.01em; }
+.case h3 { font-size: 22px; color: var(--navy); } .case p { font-size: 16px; color: #3d3852; margin-top: 12px; } .case a { color: var(--violet); font-weight: 600; }
+.mini { width: 100%; border-collapse: separate; border-spacing: 0; margin-top: 30px; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: #fff; font-size: 15.5px; }
+.mini th, .mini td { padding: 15px 20px; text-align: left; border-top: 1px solid var(--line); }
+.mini thead th { background: var(--navy); color: #fff; border-top: 0; font-size: 14px; } .mini td:nth-child(2) { background: var(--tint); font-weight: 700; color: var(--navy); }
+.heroplayer .player { max-width: 620px; }
+.pick3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 36px; }
+.pick3 a { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 30px; text-decoration: none; display: flex; flex-direction: column; }
+.pick3 em { font-style: normal; font-size: 12.5px; font-weight: 700; color: var(--royal); }
+.pick3 h3 { font-size: 24px; color: var(--navy); line-height: 1.2; margin: 8px 0 12px; letter-spacing: -0.02em; }
+.pick3 p { font-size: 15px; color: #4b4660; margin-top: 8px; } .pick3 p b { color: var(--navy); }
+.pick3 strong { margin-top: 20px; color: var(--violet); }
+.ask { margin-top: 44px; background: var(--tint); border-radius: 22px; padding: 32px 36px; }
+.ask li { font-size: 17px; margin: 10px 0 0 20px; color: #2c2740; }
+@media (max-width: 860px) { .two, .people2, .case, .pick3 { grid-template-columns: 1fr; } .promises { grid-template-columns: 1fr 1fr; } .belief { padding: 30px 24px; } .letter { padding: 28px 24px; } .story p { font-size: 18px; } .story .big { font-size: 24px; } }
+</style>
+</head>
+<body>
+<div class="vbar">Design preview, not the live site.</div>
+<div class="hero" style="padding-bottom:40px"><div class="wrap">
+  <div style="margin-top:30px;max-width:820px">
+    <div class="kicker">Three ways to tell the story</div>
+    <h1 style="font-size:46px">Same offer, three different openings.</h1>
+    <p class="lead" style="font-size:18px">Each one bets on a different reason a tradesman would trust us. They are deliberately far apart, so it is easy to say which one feels right. The current live home page is <a href="home.html" style="color:var(--royal)">here</a> for comparison.</p>
+  </div>
+  <div class="pick3">
+    <a href="story-a.html"><em>Version A</em><h3>The moment</h3><p>Opens at 9:14 pm with a customer whose AC has died, and shows the same call ending two ways.</p><p><b>The bet:</b> they feel the lost job before they hear about us.</p><p><b>Tone:</b> dramatic, dark, a story.</p><p><b>What we believe:</b> "You should not have to choose between doing the job and answering the phone."</p><strong>Open version A</strong></a>
+    <a href="story-b.html"><em>Version B</em><h3>The people</h3><p>Opens with Gary and David by name, then a letter to the owner about why we do it all for them.</p><p><b>The bet:</b> they buy from people, and nobody else shows theirs.</p><p><b>Tone:</b> personal, plain, a handshake.</p><p><b>What we believe:</b> "You did not start a company to manage software."</p><strong>Open version B</strong></a>
+    <a href="story-c.html"><em>Version C</em><h3>The proof</h3><p>Opens with the real call and a play button, then walks through what it did and a real client story.</p><p><b>The bet:</b> they trust what they can hear and check.</p><p><b>Tone:</b> confident, factual, show do not tell.</p><p><b>What we believe:</b> "If we cannot play you the call, we should not ask for your trust."</p><strong>Open version C</strong></a>
+  </div>
+  <div class="ask">
+    <b style="color:var(--navy);font-size:18px">Questions that will tell us what we want</b>
+    <ul>
+      <li>Which opening would make a tradesman stop scrolling?</li>
+      <li>Which of the three "what we believe" lines sounds most like us?</li>
+      <li>Should we show our own faces and names, or stay behind the brand?</li>
+      <li>Is the dark, dramatic look right for us, or too much?</li>
+      <li>Which parts would you lift from one version into another?</li>
+      <li>What is missing from all three?</li>
+    </ul>
+  </div>
+</div></div>
+<footer><div class="wrap">Design preview for review. Stellar Voice Agents.</div></footer>
+</body>
+</html>
