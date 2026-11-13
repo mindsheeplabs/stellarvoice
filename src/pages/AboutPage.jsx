@@ -82,6 +82,11 @@ export default function AboutPage() {
                             The AI receptionist for trades companies is priced differently: one flat monthly
                             price, from $297 a month, with no charge per minute. <a href="/pricing">See pricing</a>.
                         </p>
+                        <h2>Where we are</h2>
+                        <p>
+                            Stellar Voice Agents LLC is a United States company, registered in Wyoming. Our address is
+                            30 N Gould St, Ste R, Sheridan, WY 82801. We work with businesses across the United States.
+                        </p>
                         <p className="ap-prose-quote">
                             &quot;Any time someone needs to call someone, the AI should be calling them
                             first.&quot;

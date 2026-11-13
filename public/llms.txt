@@ -13,6 +13,10 @@ Stellar Voice Agents replaces slow, inconsistent, human-bottlenecked lead handli
 
 Pricing for the AI receptionist for trades is public (see below). Outbound and reactivation work is scoped per business on a demo call.
 
+## Company
+
+Stellar Voice Agents LLC is a United States company, registered in Wyoming in May 2026. Address: 30 N Gould St, Ste R, Sheridan, WY 82801, USA. Founders: Gary Sarco (CEO) and David Taylor (CTO). It serves businesses across the United States. Prices are in US dollars. Website: https://www.stellarvoiceagents.com
+
 ## AI receptionist for HVAC, roofing and plumbing companies
 
 A done-for-you (managed) AI receptionist for trades companies in the United States. It answers the calls an owner misses, after hours and when the team is on a job, books the appointment into the company's calendar or CRM, puts emergencies through to the on-call person, and sends a text alert for every new lead.

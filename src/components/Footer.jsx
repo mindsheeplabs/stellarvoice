@@ -38,7 +38,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="footer-bottom">
-                    <p>&copy; {new Date().getFullYear()} Stellar Voice Agents. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Stellar Voice Agents LLC, a United States company. 30 N Gould St, Ste R, Sheridan, WY 82801. All rights reserved.</p>
                 </div>
             </div>
         </footer>
