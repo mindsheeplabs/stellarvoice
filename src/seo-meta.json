@@ -39,12 +39,12 @@
     "title": "Blog: Missed Calls, Speed-to-Lead and AI Voice | Stellar Voice Agents",
     "description": "Research and real numbers on missed calls, speed-to-lead and AI voice agents, for businesses that want every lead answered 24/7."
   },
-  "/pricing": {
-    "title": "Pricing: We Get Paid When You Do | Stellar Voice Agents",
-    "description": "Pricing for AI voice agents that engage, qualify, and book your leads 24/7. See the plans and exactly what you pay for."
-  },
   "/classic": {
     "title": "Stellar Voice Agents | Earlier home page",
     "description": "AI voice agents that call, qualify and book your leads in seconds. When a call is not answered, the same AI follows up by text or WhatsApp until the lead is booked. One intelligence, every channel, 24/7."
+  },
+  "/pricing-classic": {
+    "title": "Earlier pricing | Stellar Voice Agents",
+    "description": "Pricing for AI voice agents that engage, qualify, and book your leads 24/7. See the plans and exactly what you pay for."
   }
 }

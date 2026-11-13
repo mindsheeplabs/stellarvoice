@@ -67,16 +67,20 @@ export default function AboutPage() {
                 {/* WHY PERFORMANCE PRICING */}
                 <section className="ap-section">
                     <div className="container ap-prose">
-                        <h2>Why performance pricing</h2>
+                        <h2>Why performance pricing on our outbound work</h2>
                         <p>
                             After seeing how other companies in the space priced their services, David and
                             Gary made a decision. If the system works as well as they believe it does, they
                             should be willing to put their revenue on the line.
                         </p>
                         <p>
-                            That is why the majority of SVA&apos;s revenue comes from per-booking fees. If SVA
-                            does not book qualified meetings, SVA does not get paid. That is how confident
+                            That is why SVA&apos;s outbound and lead reactivation work is paid largely per booking.
+                            If SVA does not book qualified meetings, SVA does not get paid. That is how confident
                             they are.
+                        </p>
+                        <p>
+                            The AI receptionist for trades companies is priced differently: one flat monthly
+                            price, from $297 a month, with no charge per minute. <a href="/pricing">See pricing</a>.
                         </p>
                         <p className="ap-prose-quote">
                             &quot;Any time someone needs to call someone, the AI should be calling them

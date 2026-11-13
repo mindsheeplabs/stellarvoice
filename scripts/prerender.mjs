@@ -14,9 +14,9 @@ const { render } = await import(pathToFileURL(join(root, 'dist-ssr', 'entry-serv
 
 const sitemap = readFileSync(join(root, 'public', 'sitemap.xml'), 'utf8')
 // Pages the app serves that are deliberately left out of the sitemap.
-const EXTRA = ['/pricing', '/classic']
+const EXTRA = ['/pricing-classic', '/classic']
 // Plain-HTML pages served straight from public/site by server.js: in the sitemap, not rendered by React.
-const STATIC = ['/automation', '/resources', '/ai-receptionist-for-hvac', '/ai-receptionist-for-plumbing', '/ai-receptionist-for-roofing']
+const STATIC = ['/pricing', '/automation', '/resources', '/ai-receptionist-for-hvac', '/ai-receptionist-for-plumbing', '/ai-receptionist-for-roofing']
 const fromSitemap = [...sitemap.matchAll(/<loc>https?:\/\/[^/]+(\/[^<]*)<\/loc>/g)].map((m) => m[1].replace(/\/$/, '') || '/')
 const routes = [...new Set([...fromSitemap, ...EXTRA])].filter((r) => !STATIC.includes(r))
 
@@ -51,6 +51,7 @@ const page = (route, html) => {
     }
   }
   // The earlier home page is kept for reference only: keep it out of search.
+  if (route === '/pricing-classic') out = out.replace('</title>', '</title><meta name="robots" content="noindex" />')
   if (route === '/classic') {
     out = out.replace('</title>', '</title><meta name="robots" content="noindex" />')
              .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${SITE}/" />`)

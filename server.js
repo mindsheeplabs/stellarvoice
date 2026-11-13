@@ -105,6 +105,15 @@ app.use((req, res, next) => {
 // Old case-study address: permanent redirect (the duplicate page split ranking signals).
 app.get(['/case-studies/easystart-homes', '/case-studies/easystart-homes/'], (req, res) => res.redirect(301, '/case-studies/denes-aldott'))
 
+// One host: stellarvoiceagents.com -> www.stellarvoiceagents.com, so search engines and AI
+// assistants see a single site. (API calls are left alone so a form post is never bounced.)
+app.use((req, res, next) => {
+  if (req.hostname === 'stellarvoiceagents.com' && !req.path.startsWith('/api/')) {
+    return res.redirect(301, `https://www.stellarvoiceagents.com${req.originalUrl}`)
+  }
+  next()
+})
+
 // One address per page: /about/ -> /about (keeps the query string).
 app.use((req, res, next) => {
   if (req.path.length > 1 && req.path.endsWith('/') && !req.path.startsWith('/api/')) {
@@ -120,7 +129,7 @@ app.use((req, res, next) => {
   next()
 })
 
-const RAW_TRADES = { '/': 'home.html', '/automation': 'automation.html', '/resources': 'guides.html', '/ai-receptionist-for-hvac': 'ai-receptionist-for-hvac.html', '/ai-receptionist-for-plumbing': 'ai-receptionist-for-plumbing.html', '/ai-receptionist-for-roofing': 'ai-receptionist-for-roofing.html' }
+const RAW_TRADES = { '/': 'home.html', '/pricing': 'pricing.html', '/automation': 'automation.html', '/resources': 'guides.html', '/ai-receptionist-for-hvac': 'ai-receptionist-for-hvac.html', '/ai-receptionist-for-plumbing': 'ai-receptionist-for-plumbing.html', '/ai-receptionist-for-roofing': 'ai-receptionist-for-roofing.html' }
 // The HVAC guide's first address (11 Nov 2026).
 app.get('/best-ai-receptionist-for-hvac', (req, res) => res.redirect(301, '/ai-receptionist-for-hvac'))
 // The raw files are not pages in their own right: send visitors to the real address.

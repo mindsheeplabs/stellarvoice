@@ -15,7 +15,7 @@ const CTABanner = () => {
                     can engage, qualify, and book appointments for your team. 24/7.
                 </p>
                 <p className="cta-banner-trust">
-                    Performance-based pricing. You only pay when we deliver qualified bookings.
+                    AI receptionist plans from $297 a month. No charge per minute.
                 </p>
                 <div className="cta-banner-buttons">
                     <button type="button" onClick={() => openCalendly(undefined, 'cta-banner')} className="btn-primary">Book a Demo</button>

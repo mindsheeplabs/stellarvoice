@@ -60,7 +60,8 @@ export function AppRoutes() {
           <Route path="/classic" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/how-it-works" element={<HowItWorksPage />} />
-          <Route path="/pricing" element={<PricingPage />} />
+          {/* The earlier per-booking price list. "/pricing" itself is now the trades pricing page (see server.js). */}
+          <Route path="/pricing-classic" element={<PricingPage />} />
           <Route path="/case-studies" element={<CaseStudiesHub />} />
           <Route path="/case-studies/denes-aldott" element={<CaseStudyEasyStart />} />
           <Route path="/case-studies/ipa-lead-reactivation" element={<CaseStudyIPA />} />

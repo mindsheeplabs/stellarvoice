@@ -7,8 +7,8 @@ import { TrendingUp, Target, MessageSquare, Eye, Mic, Rocket } from 'lucide-reac
 // tile 2 renamed to Focused on Sales Qualification, rest unchanged.
 const features = [
     {
-        title: 'Performance-Based Pricing',
-        description: 'You pay a low monthly retainer plus a fee per qualified booking. The bulk of what you pay only kicks in when we deliver results. Clear, predictable pricing tied to results.',
+        title: 'Clear Pricing',
+        description: 'AI receptionist plans start at $297 a month, with no charge per minute and no overage fees. Outbound calling and lead reactivation are priced for each business on a call.',
         Icon: TrendingUp
     },
     {
