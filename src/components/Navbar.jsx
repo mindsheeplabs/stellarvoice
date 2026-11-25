@@ -18,16 +18,17 @@ const Navbar = ({ onOpenCalculator }) => {
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="nav-container">
-                <Link to="/" className="logo" onClick={close}>
+                <a href="/" className="logo" onClick={close}>
                     <img src="/logo.webp" alt="Stellar Voice Agents" className="logo-img" />
-                </Link>
+                </a>
                 <button className={`hamburger ${menuOpen ? 'active' : ''}`} onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
                     <span></span><span></span><span></span>
                 </button>
                 <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-                    <li><Link to="/how-it-works" onClick={close}>How It Works</Link></li>
+                    <li><a href="/#how" onClick={close}>How It Works</a></li>
+                    <li><a href="/pricing" onClick={close}>Pricing</a></li>
                     <li><Link to="/case-studies" onClick={close}>Case Studies</Link></li>
-                    <li><Link to="/guides" onClick={close}>Guides</Link></li>
+                    <li><a href="/resources" onClick={close}>Guides</a></li>
                     <li><Link to="/blog" onClick={close}>Insights</Link></li>
                     <li><Link to="/about" onClick={close}>About</Link></li>
                 </ul>

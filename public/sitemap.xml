@@ -7,18 +7,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.stellarvoiceagents.com/how-it-works</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.stellarvoiceagents.com/appointment-engine</loc>
-    <lastmod>2026-06-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://www.stellarvoiceagents.com/about</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -31,26 +19,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.stellarvoiceagents.com/case-studies/ipa-lead-reactivation</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.stellarvoiceagents.com/case-studies/ai-receptionist-safety-net</loc>
     <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.stellarvoiceagents.com/case-studies/denes-aldott</loc>
-    <lastmod>2026-05-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.stellarvoiceagents.com/guides</loc>
-    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -61,20 +31,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.stellarvoiceagents.com/blog/hotel-missed-calls-empty-rooms</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.stellarvoiceagents.com/blog/rising-cost-of-scaling-a-human-team</loc>
     <lastmod>2026-06-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.stellarvoiceagents.com/blog/your-salespeople-are-stuck-chasing</loc>
-    <lastmod>2026-05-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

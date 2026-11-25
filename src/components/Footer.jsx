@@ -10,14 +10,14 @@ const Footer = () => {
                 <div className="footer-grid">
                     <div className="footer-brand">
                         <img src="/footer-logo.png" alt="Stellar Voice Agents" style={{ height: '36px', marginBottom: '12px' }} />
-                        <p>AI voice agents that call, qualify, and book appointments 24/7 for lead-driven businesses.</p>
+                        <p>A done-for-you AI receptionist for HVAC, roofing and plumbing companies. We answer the calls you miss and book the job.</p>
                     </div>
                     <div className="footer-links">
                         <h4>Quick Links</h4>
                         <ul>
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/how-it-works">How It Works</Link></li>
-                            <li><Link to="/appointment-engine">Appointment Engine</Link></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/#how">How It Works</a></li>
+                            <li><a href="/pricing">Pricing</a></li>
                             <li><Link to="/case-studies">Case Studies</Link></li>
                             <li><Link to="/blog">Insights</Link></li>
                             <li><Link to="/about">About</Link></li>
@@ -26,9 +26,9 @@ const Footer = () => {
                     <div className="footer-products">
                         <h4>Products</h4>
                         <ul>
-                            <li><Link to="/how-it-works">Outbound Sales Qualifier</Link></li>
-                            <li><Link to="/how-it-works">Dead Lead Reactivation</Link></li>
-                            <li><Link to="/how-it-works">Inbound Sales Qualifier</Link></li>
+                            <li><a href="/">AI Receptionist for Trades</a></li>
+                            <li><a href="/automation">Automation</a></li>
+                            <li><a href="/resources">Guides</a></li>
                         </ul>
                     </div>
                     <div className="footer-contact">

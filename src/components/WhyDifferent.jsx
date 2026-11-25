@@ -12,8 +12,8 @@ const cards = [
     },
     {
         Icon: TrendingUp,
-        title: 'Performance-based pricing. We earn when you earn.',
-        body: 'Our pricing has a low monthly retainer plus a per-booking fee. The majority of what you pay only kicks in when we put a qualified meeting on your calendar.'
+        title: 'Clear pricing. No charge per minute.',
+        body: 'AI receptionist plans start at $297 a month for up to 300 calls, with CRM integration included and no overage fees. Outbound calling and lead reactivation are priced for each business on a call.'
     },
     {
         Icon: Cpu,

@@ -10,54 +10,6 @@
 //   { type: 'ctaInline', text, href }
 
 export const blogPosts = {
-    'hotel-missed-calls-empty-rooms': {
-        slug: 'hotel-missed-calls-empty-rooms',
-        category: 'Inbound',
-        vertical: 'Hotels',
-        title: 'Every Missed Call Is an Empty Room: The Hotel Front Desk Gap',
-        dek: 'A room-night you fail to sell tonight is gone forever. 80% of callers will not leave a voicemail, and the booking call you miss at 11pm is booked somewhere else by morning. Here is what the front desk gap costs a hotel, and how to close it.',
-        metaDescription: 'A room-night you fail to sell tonight is gone forever. 80% of callers will not leave a voicemail. What missed calls really cost hotels, and how AI voice closes the gap.',
-        author: 'Gary Sarco',
-        authorRole: 'CEO',
-        date: '2026-08-05',
-        readTime: '6 min',
-        heroImage: '/blog/blog-8-hero.webp',
-        heroMobileImage: '/blog/blog-8-hero-mobile.webp',
-        heroImageAlt: 'A hotel reception phone ringing unanswered at night while a key hangs on the board, with the caption every missed call is an empty room.',
-        heroVisual: {
-            label: 'The front desk gap',
-            description: 'A hotel reception phone ringing unanswered at night while a room key hangs unused on the board.'
-        },
-        sections: [
-            { type: 'p', text: 'It is 11pm. A guest two time zones away has just finished comparing three hotels for next month\'s trip. They call yours first. The front desk closed at 10. The night manager is walking the floors. The phone rings out, and by the time anyone checks the voicemail that was never left, the guest has booked one of the other two.' },
-            { type: 'p', text: 'Hotels have a version of this problem that almost no other business has: the product expires nightly. A retailer who misses a call can still sell the same stock tomorrow. A room-night you fail to sell tonight is not deferred revenue. It is destroyed revenue. The room still gets cleaned, heated and staffed. It just earns nothing.' },
-            { type: 'h2', text: 'The maths hotels keep ignoring' },
-            { type: 'p', text: 'The consumer research on missed calls is brutal and consistent. Around 80% of callers will not leave a voicemail when nobody answers, and roughly 85% will not call back. They do not think of it as giving up on your hotel. They simply dial the next one on the list.' },
-            { type: 'p', text: 'Now add the timing problem. For a hotel with international guests, enquiries do not respect your reception hours. A large share of booking calls arrive when the desk is busiest or after it closes, which is precisely when nobody picks up.' },
-            { type: 'statStrip', image: '/blog/blog-8-stats.webp', mobileImage: '/blog/blog-8-stats-mobile.webp', imageAlt: '80% of callers will not leave a voicemail, 85% will not call back, and up to half of calls arrive outside business hours.', items: [
-                { value: '80%', label: 'of callers will not leave a voicemail' },
-                { value: '85%', label: 'will not call back if unanswered' },
-                { value: '50%', label: 'of calls can arrive outside desk hours' }
-            ] },
-            { type: 'h2', text: 'The OTA tax on every call you miss' },
-            { type: 'p', text: 'Here is the part that should sting the most. When a direct booking call goes unanswered, the guest does not always choose another hotel. Often they book the same hotel, yours, through an online travel agency an hour later. The demand was already yours. The phone call was the commission-free version of it. The missed call turned it into a booking you pay a commission on, typically 15 to 25%.' },
-            { type: 'p', text: 'Every answered call that converts is not just a saved booking. It is a direct booking: full rate, no commission, your guest data, your relationship. The phone is the cheapest direct channel a hotel has, and it is the one most hotels staff the least.' },
-            { type: 'visual', image: '/blog/blog-8-ota-vs-direct.webp', mobileImage: '/blog/blog-8-ota-vs-direct-mobile.webp', imageAlt: 'Two paths for the same guest: a missed call leads to an OTA booking with commission deducted, an answered call leads to a direct commission-free booking.', label: 'Missed call vs answered call', description: 'The same guest, two outcomes: unanswered rings become an OTA booking with commission deducted, while an answered call becomes a direct, commission-free booking.' },
-            { type: 'h2', text: 'The front desk cannot be everywhere' },
-            { type: 'p', text: 'None of this is a staffing criticism. At 3pm on a Friday your front desk is checking in a queue of arrivals, answering a guest at the counter, and fielding two lines at once. The person standing in front of them rightly wins. The phone loses. After hours, there may be nobody to lose it to at all.' },
-            { type: 'pullquote', text: 'The guest in front of the desk should always win. The guest on the phone should never be lost. Those two things stopped being in conflict.' },
-            { type: 'h2', text: 'What good looks like' },
-            { type: 'p', text: 'An AI voice agent answers every call instantly, at 3pm on Friday and at 11pm on Sunday, in the same warm, natural voice. It answers the questions guests actually call with, takes the booking enquiry, captures the details, and books or routes it exactly the way your team would. A message for the manager gets to the manager. A group enquiry, often the highest-value call a hotel receives all week, gets captured with every detail instead of ringing out.' },
-            { type: 'p', text: 'And when a caller cannot talk, the same intelligence follows up by text or WhatsApp, whichever their country actually uses, until the enquiry is resolved. One agent, every channel, no booking call lost to a busy desk again.' },
-            { type: 'takeaway', text: 'Hotel inventory is perishable, callers do not leave voicemails, and a missed direct call often comes back as a commissioned OTA booking or does not come back at all. Answering every call instantly is not a service upgrade. For a hotel, it is revenue protection on the cheapest direct channel you own.' },
-            { type: 'ctaInline', text: 'Get the free Hospitality Phone Gap guide for your hotel', href: '/guides' }
-        ],
-        sources: [
-            'Telnyx. "Voice AI Consumer Insight Panel," Nov 2025 (voicemail and callback behaviour).',
-            'Industry-standard OTA commission ranges of 15 to 25% as published by the major booking platforms.'
-        ]
-    },
-
     '5-minute-window-speed-to-lead': {
         slug: '5-minute-window-speed-to-lead',
         category: 'Speed-to-Lead',
@@ -406,75 +358,13 @@ export const blogPosts = {
             'Industry aggregates on sales ramp time (~5.7 months / ~210 days to full quota), turnover (~35% annually), and cost to replace a rep ($97k-$115k all-in), 2025-2026.',
             'Stellar Voice Agents internal model.'
         ]
-    },
-
-    'your-salespeople-are-stuck-chasing': {
-        slug: 'your-salespeople-are-stuck-chasing',
-        category: 'Productivity / Sales',
-        vertical: 'All industries',
-        title: 'Your Best Salespeople Are Stuck Chasing (Free Them to Sell)',
-        dek: 'Reps spend under 30% of their week selling and waste ~28.8 hours chasing, dialling and doing admin. Top closers sell more simply because they sell more. Here is how to give every rep that time back.',
-        metaDescription: 'Reps spend under 30% of their week selling and waste ~28.8 hours chasing, dialling and doing admin. Here is how to give every rep that time back.',
-        author: 'David Taylor',
-        authorRole: 'CTO',
-        date: '2026-05-26',
-        readTime: '6 min',
-        heroImage: '/blog/blog-7-hero.webp',
-        heroMobileImage: '/blog/blog-7-hero-mobile.webp',
-        heroImageAlt: 'Illustration of a salesperson buried under dialling and admin tasks, with a closed-deal icon out of reach, headlined that the best closer spends 70% of the week not closing.',
-        heroVisual: {
-            label: 'The underused closer',
-            description: 'A skilled closer buried under dialling and admin, with a closed-deal icon just out of reach. Under 30% selling.'
-        },
-        sections: [
-            { type: 'p', text: 'You hired your salespeople for their judgement, their rapport, their ability to read a room and close a deal. Then you sat them down and had them spend most of the week doing none of that.' },
-            { type: 'p', text: 'It is the quietest waste in most businesses. Your most expensive, most skilled people, the ones who can actually turn a conversation into revenue, spend the majority of their time on work that does not need a salesperson at all. Dialling numbers that do not pick up. Chasing leads that have gone cold. Updating the CRM. Researching contacts. Coordinating follow-ups. The grind.' },
-            { type: 'p', text: 'Here is what that is costing, and what happens when you give it back.' },
-            { type: 'h2', text: 'The 30% problem' },
-            { type: 'p', text: 'Across Salesforce and Forrester research, salespeople spend under 30% of their time actually selling. A Forrester study of 3,031 reps put hard numbers on the rest of the week: about 20% on admin and CRM data entry, 15% in internal meetings, 15% on manual prospect research, and 10% on email. Add it up and the average rep loses roughly 28.8 hours every week to non-selling work.' },
-            { type: 'p', text: 'Think about what that means. You are paying a closer\'s salary for what amounts to a day and a half of actual closing, and three and a half days of tasks you could hand to almost anyone, or to a system.' },
-            { type: 'statStrip', image: '/blog/blog-7-stats.webp', mobileImage: '/blog/blog-7-stats-mobile.webp', imageAlt: 'Under 30% of the week spent selling, 28.8 hours lost to non-selling work per rep per week, and 1.3 follow-up attempts made versus an optimal six.', items: [
-                { value: '<30%', label: 'of the week actually selling' },
-                { value: '28.8 hrs', label: 'lost to non-selling work, per rep, per week' },
-                { value: '1.3 vs 6', label: 'follow-up attempts made vs optimal' }
-            ] },
-            { type: 'h2', text: 'Selling more is mostly about selling more' },
-            { type: 'p', text: 'Here is the finding that should change how you think about your team\'s time. When researchers compared top and bottom performers, the gap was not mysterious. Top performers spend about 34% of their time selling. Bottom performers spend about 23%.' },
-            { type: 'p', text: 'That is it. The biggest, most consistent difference between your best and worst reps is how much of their week they actually get to spend in front of customers. Selling time correlates directly with quota attainment.' },
-            { type: 'p', text: 'So if you could lift every rep\'s selling time from 23-30% toward 40%+, you would not need to hire anyone, retrain anyone, or change your product. You would just be letting the people you already have do more of the thing they are good at. The leverage is enormous, and it is sitting in plain sight.' },
-            { type: 'pullquote', text: 'The difference between a top performer and a bottom performer is mostly how many hours they are allowed to spend selling. Give everyone those hours back.' },
-            { type: 'visual', image: '/blog/blog-7-top-vs-bottom.webp', mobileImage: '/blog/blog-7-top-vs-bottom-mobile.webp', imageAlt: 'Bar chart showing top performers spend 34% of time selling versus 23% for bottom performers.', label: 'Top vs bottom performers', description: 'The only real difference: top performers spend 34% of time selling, bottom performers 23%.' },
-            { type: 'h2', text: 'The chasing trap' },
-            { type: 'p', text: 'The worst offender is the chase itself, and it is a double waste. Not only does it eat your reps\' hours, they are usually bad at it, not because they lack skill, but because chasing rewards relentless, instant, tireless persistence, which is exactly what a human at a desk cannot sustain.' },
-            { type: 'p', text: 'The data makes this painful. The optimal number of follow-up attempts on a lead is around six; the average rep makes about 1.3 before giving up. Meanwhile the average business takes 47 hours to respond to a new lead at all. So your reps are simultaneously spending too many hours chasing and under-chasing the leads that matter, because the grind burns them out and they quit too early on each one.' },
-            { type: 'p', text: 'It is the worst of both worlds: the activity that wastes the most of their time is also the activity they cannot do well. That is a textbook sign the work belongs to a system, not a person.' },
-            { type: 'h2', text: 'Give the chase to the agent, give the time to the closer' },
-            { type: 'p', text: 'This is exactly what an AI voice agent is built for. It does the part of the job that is repetitive, instant and relentless, and it never tires of it.' },
-            { type: 'p', text: 'It responds to every new lead in seconds, calls back the ones who did not pick up, follows up the full six-plus attempts without losing patience or motivation, qualifies each lead against your criteria, and logs every conversation automatically. The cold, low-yield, hour-draining chase, the work your reps least want to do and do least well, simply disappears from their day.' },
-            { type: 'p', text: 'What lands on your salesperson\'s calendar instead is a warm, qualified, already-booked appointment with someone who has been vetted and wants to talk. Your rep opens their day to a list of real conversations, not a list of numbers to dial.' },
-            { type: 'h2', text: 'What your team does with the hours back' },
-            { type: 'p', text: 'Hand the chase to the agent and you do not just save time, you change the shape of the job.' },
-            { type: 'p', text: 'Your reps stop being part-time dialler operators and become full-time closers. They spend their hours building relationships, handling genuine objections, tailoring the offer, and getting people across the line, the high-value, human work that actually compounds revenue. Their selling time climbs toward (and past) the top-performer benchmark, not because they are working harder, but because they are finally working on the right thing.' },
-            { type: 'p', text: 'Same people. Same salaries. Far more selling. That is not a productivity tweak; it is the difference between a team that is busy and a team that is winning.' },
-            { type: 'visual', image: '/blog/blog-7-chase-to-close-flow.webp', mobileImage: '/blog/blog-7-chase-to-close-flow-mobile.webp', imageAlt: 'Flow diagram: cold leads go into an AI agent that responds, follows up six times, qualifies and books, producing a rep\'s calendar of warm booked appointments to close.', label: 'From numbers to closes', description: 'Cold leads flow into the AI agent, which responds, follows up six times, qualifies and books. The rep receives warm appointments to close.' },
-            { type: 'takeaway', text: 'Your salespeople spend under 30% of their week selling and waste around 28.8 hours chasing, dialling and doing admin, and the single biggest difference between top and bottom performers is simply how much they get to sell. Hand the relentless, low-value chase to an AI voice agent and give your closers their hours back. You do not need more people. You need your people doing the work only they can do.' }
-        ],
-        sources: [
-            'Salesforce. "State of Sales" research and 2023/2025 productivity findings (reps spend under 30% of time selling; top vs bottom performer selling time).',
-            'Forrester. Activity study of 3,031 sales reps (time breakdown; ~28.8 hrs/week non-selling).',
-            'Oldroyd, J. (MIT Sloan) / InsideSales, 2007 (optimal ~6 attempts vs avg 1.3).',
-            'Drift. "2018 Lead Response Report" (47-hour average response).',
-            'Stellar Voice Agents internal data and model.'
-        ]
     }
 };
 
 // Publish order — drives the index page and "related posts" rotation.
 // Newest first; posts are spaced one week apart (2026-06-02 back to 2026-04-21).
 export const POST_ORDER = [
-    'hotel-missed-calls-empty-rooms',
     'rising-cost-of-scaling-a-human-team',
-    'your-salespeople-are-stuck-chasing',
     '5-minute-window-speed-to-lead',
     'every-missed-call-is-a-lost-customer',
     'are-my-clients-too-old-for-ai',

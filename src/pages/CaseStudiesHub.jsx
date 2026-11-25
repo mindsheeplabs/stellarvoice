@@ -11,24 +11,6 @@ import './CaseStudiesHub.css';
 // flagged as in production / publishing soon.
 const cards = [
     {
-        slug: 'ipa-lead-reactivation',
-        industry: 'International Real Estate / Lead Reactivation',
-        title: 'From a dead database to a $500K property buyer.',
-        client: 'International Property Alerts (Chris White, Founder)',
-        headline: '6%',
-        headlineLabel: 'reactivation rate on 11-month-old leads',
-        status: 'live'
-    },
-    {
-        slug: 'denes-aldott',
-        industry: 'Real Estate / New Home Builder',
-        title: 'From a 60-lead pilot to a 6-month outbound engine.',
-        client: 'EasyStart Homes (Denes Aldott, Sales Consultant)',
-        headline: '17 to 25%',
-        headlineLabel: 'booking rate on cold leads',
-        status: 'live'
-    },
-    {
         slug: 'ai-receptionist-safety-net',
         industry: 'Marketing Agency / Inbound Reception',
         title: 'The 24/7 safety net for a boutique agency\'s busiest phone risk.',
@@ -36,15 +18,6 @@ const cards = [
         headline: '24/7',
         headlineLabel: 'zero-miss coverage on overflow and after-hours calls',
         status: 'live'
-    },
-    {
-        slug: null,
-        industry: 'Solar Energy',
-        title: 'Case study coming soon',
-        client: 'Solar engagement in production',
-        headline: 'In progress',
-        headlineLabel: 'Publishing when data is verified',
-        status: 'coming-soon'
     }
 ];
 

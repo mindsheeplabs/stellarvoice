@@ -103,7 +103,6 @@ app.use((req, res, next) => {
 })
 
 // Old case-study address: permanent redirect (the duplicate page split ranking signals).
-app.get(['/case-studies/easystart-homes', '/case-studies/easystart-homes/'], (req, res) => res.redirect(301, '/case-studies/denes-aldott'))
 
 // One host: stellarvoiceagents.com -> www.stellarvoiceagents.com, so search engines and AI
 // assistants see a single site. (API calls are left alone so a form post is never bounced.)
@@ -130,6 +129,23 @@ app.use((req, res, next) => {
 })
 
 const RAW_TRADES = { '/': 'home.html', '/pricing': 'pricing.html', '/automation': 'automation.html', '/resources': 'guides.html', '/ai-receptionist-for-hvac': 'ai-receptionist-for-hvac.html', '/ai-receptionist-for-plumbing': 'ai-receptionist-for-plumbing.html', '/ai-receptionist-for-roofing': 'ai-receptionist-for-roofing.html' }
+// Pages retired on 25 Nov 2026 (earlier offer, other industries). Each goes to the nearest current page
+// so old links and search results still land somewhere useful.
+const RETIRED = {
+  '/classic': '/',
+  '/pricing-classic': '/pricing',
+  '/how-it-works': '/',
+  '/appointment-engine': '/',
+  '/guides': '/resources',
+  '/case-studies/ipa-lead-reactivation': '/resources',
+  '/case-studies/denes-aldott': '/resources',
+  '/case-studies/easystart-homes': '/resources',
+  '/blog/hotel-missed-calls-empty-rooms': '/resources',
+  '/blog/your-salespeople-are-stuck-chasing': '/resources',
+}
+app.get(Object.keys(RETIRED), (req, res) => res.redirect(301, RETIRED[req.path]))
+// The design previews are gone too, apart from the story versions still under review.
+app.get('/preview/:file.html', (req, res, next) => (req.params.file.startsWith('story') ? next() : res.redirect(302, '/')))
 // The HVAC guide's first address (11 Nov 2026).
 app.get('/best-ai-receptionist-for-hvac', (req, res) => res.redirect(301, '/ai-receptionist-for-hvac'))
 // The raw files are not pages in their own right: send visitors to the real address.
