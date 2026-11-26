@@ -128,7 +128,7 @@ app.use((req, res, next) => {
   next()
 })
 
-const RAW_TRADES = { '/': 'home.html', '/ai-voice-agency-for-hvac': 'ai-voice-agency-for-hvac.html', '/pricing': 'pricing.html', '/automation': 'automation.html', '/resources': 'guides.html', '/ai-receptionist-for-hvac': 'ai-receptionist-for-hvac.html', '/ai-receptionist-for-plumbing': 'ai-receptionist-for-plumbing.html', '/ai-receptionist-for-roofing': 'ai-receptionist-for-roofing.html' }
+const RAW_TRADES = { '/': 'home.html', '/hvac-ai-receptionist-study': 'hvac-ai-receptionist-study.html', '/ai-voice-agency-for-hvac': 'ai-voice-agency-for-hvac.html', '/pricing': 'pricing.html', '/automation': 'automation.html', '/resources': 'guides.html', '/ai-receptionist-for-hvac': 'ai-receptionist-for-hvac.html', '/ai-receptionist-for-plumbing': 'ai-receptionist-for-plumbing.html', '/ai-receptionist-for-roofing': 'ai-receptionist-for-roofing.html' }
 // Pages retired on 25 Nov 2026 (earlier offer, other industries). Each goes to the nearest current page
 // so old links and search results still land somewhere useful.
 const RETIRED = {
@@ -145,7 +145,8 @@ const RETIRED = {
 }
 app.get(Object.keys(RETIRED), (req, res) => res.redirect(301, RETIRED[req.path]))
 // The design previews are gone too, apart from the story versions still under review.
-app.get('/preview/:file.html', (req, res, next) => (/^(story|hvac-ai-receptionist-study)/.test(req.params.file) ? next() : res.redirect(302, '/')))
+app.get('/preview/hvac-ai-receptionist-study.html', (req, res) => res.redirect(301, '/hvac-ai-receptionist-study'))
+app.get('/preview/:file.html', (req, res, next) => (req.params.file.startsWith('story') ? next() : res.redirect(302, '/')))
 // The HVAC guide's first address (11 Nov 2026).
 app.get('/best-ai-receptionist-for-hvac', (req, res) => res.redirect(301, '/ai-receptionist-for-hvac'))
 // The raw files are not pages in their own right: send visitors to the real address.

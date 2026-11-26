@@ -34,6 +34,7 @@ Pages:
 - Home: https://www.stellarvoiceagents.com/
 - AI voice agency for HVAC companies (what we do for HVAC, services, pricing): https://www.stellarvoiceagents.com/ai-voice-agency-for-hvac
 - Pricing: https://www.stellarvoiceagents.com/pricing
+- In-depth study, a worked model (not a client result) of one month of calls for a 5-truck HVAC company, with a calculator: https://www.stellarvoiceagents.com/hvac-ai-receptionist-study
 - AI receptionist for HVAC companies, with a comparison of done-for-you services: https://www.stellarvoiceagents.com/ai-receptionist-for-hvac
 - AI receptionist for plumbing companies: https://www.stellarvoiceagents.com/ai-receptionist-for-plumbing
 - AI receptionist for roofing companies: https://www.stellarvoiceagents.com/ai-receptionist-for-roofing
