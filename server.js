@@ -145,7 +145,7 @@ const RETIRED = {
 }
 app.get(Object.keys(RETIRED), (req, res) => res.redirect(301, RETIRED[req.path]))
 // The design previews are gone too, apart from the story versions still under review.
-app.get('/preview/:file.html', (req, res, next) => (req.params.file.startsWith('story') ? next() : res.redirect(302, '/')))
+app.get('/preview/:file.html', (req, res, next) => (/^(story|hvac-ai-receptionist-study)/.test(req.params.file) ? next() : res.redirect(302, '/')))
 // The HVAC guide's first address (11 Nov 2026).
 app.get('/best-ai-receptionist-for-hvac', (req, res) => res.redirect(301, '/ai-receptionist-for-hvac'))
 // The raw files are not pages in their own right: send visitors to the real address.

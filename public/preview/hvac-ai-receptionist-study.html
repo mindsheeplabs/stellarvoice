@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Design preview: In-depth study, AI receptionist for a 5-truck HVAC company | Stellar Voice Agents</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mock.css?v=1795693293">
+<style>
+.st-eyebrow { display: inline-block; font-size: 12.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--royal); background: #ECE8FB; border-radius: 999px; padding: 6px 14px; }
+.st-hero h1 { font-size: 50px; max-width: 900px; margin-top: 16px; }
+.st-sub { font-size: 19px; color: #3d3852; max-width: 760px; line-height: 1.55; }
+.st-model { display: flex; gap: 12px; align-items: flex-start; background: #FFFBEB; border: 1px solid #F5DFA0; border-radius: 14px; padding: 14px 18px; font-size: 14.5px; color: #6B4E00; max-width: 760px; margin-top: 22px; }
+.st-model b { color: #5A3F00; }
+.st-tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 34px; }
+.st-tile { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 24px; }
+.st-tile b { display: block; font-size: 38px; font-weight: 800; color: var(--navy); letter-spacing: -0.03em; line-height: 1.05; }
+.st-tile span { display: block; font-size: 14px; color: #4b4660; margin-top: 8px; }
+.st-tile em { display: block; font-style: normal; font-size: 11.5px; font-weight: 700; color: var(--royal); margin-top: 10px; }
+.st-glance { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; background: #fff; margin-top: 30px; }
+.st-glance div { padding: 22px 26px; border-top: 1px solid var(--line); }
+.st-glance div:nth-child(-n+2) { border-top: 0; } .st-glance div:nth-child(odd) { border-right: 1px solid var(--line); }
+.st-glance dt { font-size: 12.5px; font-weight: 700; color: var(--royal); text-transform: uppercase; letter-spacing: .08em; }
+.st-glance dd { font-size: 16px; color: #2c2740; margin-top: 6px; }
+.st-prose { max-width: 780px; } .st-prose p { font-size: 18px; line-height: 1.7; color: #2c2740; margin-top: 16px; }
+.st-day { margin-top: 30px; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; background: #fff; }
+.st-day div { display: grid; grid-template-columns: 96px 1fr 150px; gap: 16px; padding: 16px 24px; border-top: 1px solid var(--line); font-size: 15.5px; color: #3d3852; align-items: center; }
+.st-day div:first-child { border-top: 0; } .st-day time { font-weight: 700; color: var(--violet); } .st-day b { color: var(--navy); }
+.st-day i { font-style: normal; justify-self: end; font-size: 12.5px; font-weight: 600; padding: 5px 12px; border-radius: 999px; background: #E7F6EF; color: var(--green); }
+.st-day i.t { background: #FEECEC; color: var(--red); } .st-day i.m { background: var(--tint); color: var(--royal); }
+.calc { display: grid; grid-template-columns: 1.1fr 1fr; gap: 0; border-radius: 22px; overflow: hidden; border: 1px solid var(--line); margin-top: 30px; background: #fff; }
+.calc .in { padding: 30px 32px; } .calc .out { padding: 30px 32px; background: linear-gradient(160deg, var(--navy), var(--royal)); color: #fff; }
+.calc label { display: grid; grid-template-columns: 1fr 120px; gap: 14px; align-items: center; font-size: 15px; color: #2c2740; padding: 11px 0; border-top: 1px solid var(--line); }
+.calc label:first-of-type { border-top: 0; } .calc label small { display: block; font-size: 12.5px; color: var(--mute); margin-top: 2px; }
+.calc input { width: 100%; padding: 10px 12px; border: 1px solid #D5CFEA; border-radius: 10px; font: inherit; font-size: 16px; font-weight: 600; color: var(--navy); text-align: right; }
+.calc .out h3 { font-size: 15px; font-weight: 600; opacity: .85; }
+.calc .row { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-top: 1px solid rgba(255,255,255,.18); font-size: 15.5px; }
+.calc .row b { font-size: 19px; } .calc .total { margin-top: 10px; padding-top: 18px; border-top: 2px solid rgba(255,255,255,.4); }
+.calc .total b { display: block; font-size: 44px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; } .calc .total span { font-size: 14.5px; opacity: .88; }
+.st-notes { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 30px; }
+.st-notes div { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 26px; }
+.st-notes h3 { font-size: 18px; color: var(--navy); margin-bottom: 10px; } .st-notes li { font-size: 15px; color: #3d3852; margin: 8px 0 0 18px; }
+.st-src { font-size: 13px; color: var(--mute); margin-top: 16px; } .st-src a { color: var(--royal); }
+@media (max-width: 860px) { .st-hero h1 { font-size: 34px; } .st-tiles { grid-template-columns: 1fr 1fr; } .st-glance, .calc, .st-notes { grid-template-columns: 1fr; } .st-glance div:nth-child(odd) { border-right: 0; } .st-glance div:nth-child(2) { border-top: 1px solid var(--line); } .st-day div { grid-template-columns: 70px 1fr; } .st-day i { grid-column: 2; justify-self: start; } }
+</style>
+</head>
+<body>
+<div class="previewbar">Design preview, not the live site.</div>
+<div class="hero st-hero" style="padding-bottom:56px">
+  <div class="wrap">
+    <div class="nav">
+      <a class="logo" href="/"><img src="logo.webp?v=1795693293" alt="Stellar Voice Agents"></a>
+      <ul><li><a href="/#how">How it works</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/automation">Automation</a></li><li><a href="/resources">Guides</a></li><li><a href="/#hear">Hear a call</a></li></ul>
+      <a class="btn small" href="/#demo">Book a 15 minute demo</a>
+    </div>
+    <div style="margin-top:44px">
+      <span class="st-eyebrow">In-depth review and study</span>
+      <h1>What an AI receptionist changes for a 5-truck HVAC company</h1>
+      <p class="st-sub">We modelled a month of calls for a typical owner-run HVAC company: what gets missed today, what happens when every call is answered, and what that is worth.</p>
+      <div class="st-model"><span><b>How to read this.</b> This is a worked model, not a client result. The company is an example we built from published call data and our own set-up process. Every number can be changed in the calculator below.</span></div>
+      <div class="st-tiles">
+        <div class="st-tile"><b>56</b><span>calls a month going to voicemail today</span><em>Modelled</em></div>
+        <div class="st-tile"><b>14</b><span>extra jobs booked a month</span><em>Modelled</em></div>
+        <div class="st-tile"><b>$4,900</b><span>in extra work a month</span><em>Modelled</em></div>
+        <div class="st-tile"><b>$297</b><span>a month, all included</span><em>Our price</em></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section style="padding-top:20px">
+  <div class="wrap">
+    <h2>At a glance</h2>
+    <dl class="st-glance">
+      <div><dt>The company</dt><dd>An owner-run HVAC company with five trucks and one person in the office. A modelled example.</dd></div>
+      <div><dt>The problem</dt><dd>About 400 calls a month. The ones that come in after hours, at lunch or on the first hot day go to voicemail.</dd></div>
+      <div><dt>What we set up</dt><dd>An AI receptionist that answers the calls the office cannot, books the visit and puts emergencies through to the on-call tech.</dd></div>
+      <div><dt>What the model shows</dt><dd>56 missed calls answered, 14 more jobs booked and about $4,900 in extra work a month, for $297.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="tinted">
+  <div class="wrap">
+    <div class="st-prose">
+      <h2>The situation</h2>
+      <p>The owner is on a job. The office manager is on the other line, at lunch, or gone home at five. The phone still rings.</p>
+      <p>CallRail measured a 14% missed-call rate for home services businesses in January 2025. Invoca's 2026 benchmark is harsher: a person answered only 52% of inbound home services calls. We used the lower figure, so this model is the cautious version.</p>
+      <p>At 400 calls a month, 14% is 56 calls that nobody picks up. Some are suppliers and sales calls. Many are people with a broken system who will ring the next company on the list.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What gets set up, and how long it takes</h2>
+    <p class="lead">This part is not modelled. It is how we set up every company.</p>
+    <div class="steps">
+      <div class="step"><h3>Day 1: a 15 minute call</h3><p>Services, service area, hours, what counts as an emergency and who is on call.</p></div>
+      <div class="step"><h3>Day 1 to 2: we build and test it</h3><p>We write how the phone is answered, connect the calendar or CRM, and run practice calls before a customer hears it.</p></div>
+      <div class="step"><h3>Day 2: the phone is covered</h3><p>Calls the office cannot take are forwarded. The owner gets a text for every new lead.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="tinted">
+  <div class="wrap">
+    <h2>One day of calls</h2>
+    <p class="lead">A typical July weekday for the modelled company. The receptionist takes the six calls the office could not.</p>
+    <div class="st-day">
+      <div><time>6:52 am</time><span><b>"The AC is blowing warm."</b> Before the office opens. Address and problem taken, booked for 10:00 am.</span><i>Job booked</i></div>
+      <div><time>9:20 am</time><span><b>Second caller while the office is on the phone.</b> Tune-up request, booked for Thursday.</span><i>Job booked</i></div>
+      <div><time>12:15 pm</time><span><b>Lunch.</b> A supplier chasing an invoice. Message passed to the office by text.</span><i class="m">Message taken</i></div>
+      <div><time>3:40 pm</time><span><b>Three calls in ten minutes</b> on the hottest part of the day. The office takes one. The receptionist books one repair and takes a quote request.</span><i>Job booked</i></div>
+      <div><time>7:05 pm</time><span><b>"No cooling, and my mother is 84."</b> Treated as urgent under the owner's rules and put through to the on-call tech.</span><i class="t">Put through</i></div>
+      <div><time>10:30 pm</time><span><b>Unit making a grinding noise.</b> Not urgent. Booked for the first visit of the morning, owner gets a text.</span><i>Job booked</i></div>
+    </div>
+  </div>
+</section>
+
+<section id="hear">
+  <div class="wrap split">
+    <div>
+      <h2>What one of those calls sounds like</h2>
+      <p class="lead">This part is real: a recorded test call to an HVAC receptionist we built. A furnace that keeps clicking off, booked for 7:30 that evening.</p>
+    </div>
+    <div class="player" id="player">
+      <button class="play" id="pbtn" aria-label="Play the recorded call"></button>
+      <div style="flex:1">
+        <b>Furnace not heating <em class="demo-tag">Recorded call</em></b>
+        <span><span id="ptime">0:00</span> / 1:51 · booked for 7:30 that evening</span>
+        <div class="wave"><i style="animation-delay:0.00s"></i><i style="animation-delay:0.07s"></i><i style="animation-delay:0.14s"></i><i style="animation-delay:0.21s"></i><i style="animation-delay:0.28s"></i><i style="animation-delay:0.35s"></i><i style="animation-delay:0.42s"></i><i style="animation-delay:0.49s"></i><i style="animation-delay:0.56s"></i><i style="animation-delay:0.63s"></i><i style="animation-delay:0.70s"></i><i style="animation-delay:0.77s"></i><i style="animation-delay:0.04s"></i><i style="animation-delay:0.11s"></i><i style="animation-delay:0.18s"></i><i style="animation-delay:0.25s"></i><i style="animation-delay:0.32s"></i><i style="animation-delay:0.39s"></i><i style="animation-delay:0.46s"></i><i style="animation-delay:0.53s"></i><i style="animation-delay:0.60s"></i><i style="animation-delay:0.67s"></i><i style="animation-delay:0.74s"></i><i style="animation-delay:0.01s"></i><i style="animation-delay:0.08s"></i><i style="animation-delay:0.15s"></i><i style="animation-delay:0.22s"></i><i style="animation-delay:0.29s"></i></div>
+        <div class="pbar"><div id="pfill"></div></div>
+        <audio id="demoaudio" src="audio/hvac-gary-2-trim.mp3?v=1795693293" preload="none"></audio>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tinted" id="numbers">
+  <div class="wrap">
+    <h2>The numbers</h2>
+    <p class="lead">Change any figure to match your own company. The results update as you type.</p>
+    <div class="calc">
+      <div class="in">
+        <label><span>Calls a month<small>All inbound calls to the company.</small></span><input id="c1" type="number" min="0" value="400"></label>
+        <label><span>Calls missed, %<small>CallRail measured 14% for home services.</small></span><input id="c2" type="number" min="0" max="100" value="14"></label>
+        <label><span>Missed calls that are new jobs, %<small>Our assumption. The rest are suppliers, sales calls and existing customers.</small></span><input id="c3" type="number" min="0" max="100" value="50"></label>
+        <label><span>New-job calls that book when answered, %<small>Our assumption.</small></span><input id="c4" type="number" min="0" max="100" value="50"></label>
+        <label><span>Average job value, $<small>Use your own average repair or service ticket.</small></span><input id="c5" type="number" min="0" value="350"></label>
+      </div>
+      <div class="out">
+        <h3>What the model shows each month</h3>
+        <div class="row"><span>Calls going to voicemail today</span><b id="o1">56</b></div>
+        <div class="row"><span>Of those, people wanting a job done</span><b id="o2">28</b></div>
+        <div class="row"><span>Extra jobs booked</span><b id="o3">14</b></div>
+        <div class="row"><span>Cost of the receptionist</span><b>$297</b></div>
+        <div class="total"><b id="o4">$4,900</b><span>in extra work a month, about <span id="o5">16</span> times the cost</span></div>
+      </div>
+    </div>
+    <p class="st-src">Sources: <a href="https://callrail.com/blog/home-services-marketing-statistics">CallRail, home services statistics</a> (14% missed-call rate, January 2025) and <a href="https://invoca.com/reports/the-invoca-home-services-lead-conversion-benchmarks-report-2026">Invoca, 2026 Home Services Benchmarks</a> (a person answered 52% of inbound calls). The other three inputs are our assumptions.</p>
+    <div class="trybar">
+      <div><b>Want to hear your own one?</b><span>We build a receptionist for your HVAC company. You call it and try it. Free.</span></div>
+      <div class="acts"><button class="btn" onclick="document.getElementById('try').showModal()">Get your own receptionist to try</button><a class="btn alt" href="#demo">Book a 15 minute demo</a></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What this study is, and is not</h2>
+    <div class="st-notes">
+      <div><h3>What is real</h3><ul><li>The set-up steps and the 24 to 48 hour timing.</li><li>The price: $297 a month for up to 300 calls, CRM integration included.</li><li>The recorded call.</li><li>The two published call statistics, with their sources.</li></ul></div>
+      <div><h3>What is modelled</h3><ul><li>The company. It is an example, not a client.</li><li>The day of calls. It shows the kinds of call we set up for, not a log.</li><li>The share of missed calls that are new jobs, the booking rate and the job value. Change them above.</li><li>The results. Your own will depend on your call volume and your prices.</li></ul></div>
+    </div>
+    <p class="st-src">When we have a full month of results from an HVAC client who is happy to share them, we will publish those numbers here.</p>
+  </div>
+</section>
+
+<section id="demo">
+  <div class="wrap">
+    <div class="cta">
+      <div><h2>See what the numbers look like for your company</h2><p>15 minutes. Bring your call volume and we will work it through with you.</p></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn" href="#demo">Book a 15 minute demo</a><button class="btn" style="background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.7)" onclick="document.getElementById('try').showModal()">Get your own receptionist to try</button></div>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap">Design preview for review. Stellar Voice Agents.</div></footer>
+<script>
+(function () {
+  var g = function (id) { return document.getElementById(id); };
+  var money = function (n) { return '$' + Math.round(n).toLocaleString('en-US'); };
+  function run() {
+    var calls = +g('c1').value || 0, miss = (+g('c2').value || 0) / 100, jobs = (+g('c3').value || 0) / 100, book = (+g('c4').value || 0) / 100, val = +g('c5').value || 0;
+    var m = calls * miss, n = m * jobs, b = n * book, r = Math.round(b) * val;
+    g('o1').textContent = Math.round(m); g('o2').textContent = Math.round(n); g('o3').textContent = Math.round(b);
+    g('o4').textContent = money(r); g('o5').textContent = Math.round(r / 297);
+  }
+  ['c1', 'c2', 'c3', 'c4', 'c5'].forEach(function (id) { g(id).addEventListener('input', run); });
+  run();
+})();
+</script>
+<script>
+(function () {
+  var a = document.getElementById('demoaudio'), p = document.getElementById('player'), btn = document.getElementById('pbtn');
+  var t = document.getElementById('ptime'), f = document.getElementById('pfill');
+  function set(on) { p.classList.toggle('is-playing', on); btn.classList.toggle('on', on); }
+  btn.addEventListener('click', function () { if (a.paused) { a.play(); } else { a.pause(); } });
+  a.addEventListener('play', function () { set(true); });
+  a.addEventListener('pause', function () { set(false); });
+  a.addEventListener('ended', function () { set(false); f.style.width = '0'; t.textContent = '0:00'; });
+  a.addEventListener('timeupdate', function () {
+    var s = Math.floor(a.currentTime);
+    t.textContent = Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2);
+    if (a.duration) f.style.width = (a.currentTime / a.duration * 100) + '%';
+  });
+})();
+</script>
+<dialog class="try" id="try">
+  <form class="try-in" method="dialog" onsubmit="event.preventDefault();this.innerHTML='<h3>Thanks. We are on it.</h3><p>We will email you a number to call within one business day, so you can hear your own receptionist answer as your company.</p>';">
+    <button type="button" class="x" onclick="document.getElementById('try').close()" aria-label="Close">&times;</button>
+    <h3>Get your own receptionist to try</h3>
+    <p>Tell us about your company. We build one for you and send you a number to call. Free, no card.</p>
+    <label>Your name<input required name="name" autocomplete="name"></label>
+    <label>Email<input required name="email" type="email" autocomplete="email"></label>
+    <label>Company name (optional)<input name="company" autocomplete="organization"></label>
+    <button class="btn" type="submit">Build my receptionist</button>
+    <small>Prefer to talk first? <a href="#demo" onclick="document.getElementById('try').close()">Book a 15 minute demo</a></small>
+  </form>
+</dialog>
+</body>
+</html>
