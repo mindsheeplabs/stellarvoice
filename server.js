@@ -128,7 +128,7 @@ app.use((req, res, next) => {
   next()
 })
 
-const RAW_TRADES = { '/': 'home.html', '/pricing': 'pricing.html', '/automation': 'automation.html', '/resources': 'guides.html', '/ai-receptionist-for-hvac': 'ai-receptionist-for-hvac.html', '/ai-receptionist-for-plumbing': 'ai-receptionist-for-plumbing.html', '/ai-receptionist-for-roofing': 'ai-receptionist-for-roofing.html' }
+const RAW_TRADES = { '/': 'home.html', '/ai-voice-agency-for-hvac': 'ai-voice-agency-for-hvac.html', '/pricing': 'pricing.html', '/automation': 'automation.html', '/resources': 'guides.html', '/ai-receptionist-for-hvac': 'ai-receptionist-for-hvac.html', '/ai-receptionist-for-plumbing': 'ai-receptionist-for-plumbing.html', '/ai-receptionist-for-roofing': 'ai-receptionist-for-roofing.html' }
 // Pages retired on 25 Nov 2026 (earlier offer, other industries). Each goes to the nearest current page
 // so old links and search results still land somewhere useful.
 const RETIRED = {

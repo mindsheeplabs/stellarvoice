@@ -84,6 +84,11 @@ export default function AboutPage() {
                         </p>
                         <h2>Where we are</h2>
                         <p>
+                            Stellar Voice Agents is a US-based AI voice agency specialising in done-for-you AI voice
+                            agents for HVAC, roofing and plumbing contractors. We handle everything, from consultation
+                            and voice agent development to CRM integration, deployment, testing and ongoing optimisation.
+                        </p>
+                        <p>
                             Stellar Voice Agents LLC is a United States company, registered in Wyoming. Our address is
                             30 N Gould St, Ste R, Sheridan, WY 82801. We work with businesses across the United States.
                         </p>
